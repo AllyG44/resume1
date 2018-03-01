@@ -10,7 +10,15 @@ header {
   text-align: center;
 }
 
+h1 {
+  color: #577590;
+}
+
 h3 {
   font-style: italic;
   text-decoration: underline;
+}
+
+footer {
+  font-size: 11px;
 }
