@@ -2,16 +2,12 @@ body {
   margin: 0 20% 0 20%;
 }
 
-header {
+.center {
   text-align: center;
 }
 
 .border {
   border-bottom: 2px dotted #07BEB8;
-}
-
-.center {
-  text-align: center;
 }
 
 h1 {
@@ -21,11 +17,12 @@ h1 {
 h3 {
   font-style: bold;
   text-decoration: underline;
+  color: #028090;
 }
 
 h4 {
   font-style: italic;
-  color: grey;
+  color: #1A5E63;
 }
 
 footer {
