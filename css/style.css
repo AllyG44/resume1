@@ -6,6 +6,10 @@ header {
   text-align: center;
 }
 
+.border {
+  border-bottom: 2px dotted black;
+}
+
 .center {
   text-align: center;
 }
@@ -15,14 +19,16 @@ h1 {
 }
 
 h3 {
-  font-style: italic;
+  font-style: bold;
   text-decoration: underline;
 }
 
 h4 {
+  font-style: italic;
   color: grey;
 }
 
 footer {
   font-size: 11px;
+  border-bottom: 3px groove;
 }
