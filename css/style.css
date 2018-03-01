@@ -1,0 +1,33 @@
+body {
+  margin: 0 20% 0 20%;
+  background: url("white.jpg") no-repeat fixed center;
+  background-size: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.border {
+  border-bottom: 2px dotted #07BEB8;
+}
+
+h1 {
+  color: #2F6690;
+}
+
+h3 {
+  font-style: bold;
+  text-decoration: underline;
+  color: #028090;
+}
+
+h4 {
+  font-style: italic;
+  color: #1A5E63;
+}
+
+footer {
+  font-size: 11px;
+  border-top: 3px groove #07BEB8;
+}
