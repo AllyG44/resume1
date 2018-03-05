@@ -1,3 +1,13 @@
+body {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+}
+
 a {
   font-size: 10px;
 }
@@ -9,10 +19,52 @@ ul {
 }
 
 li {
+  color: white;
   display: inline;
 }
 
-h3 {
-  border: 3px solid black;
+.unity {
+  color: white;
+  margin-top: 80px;
+  border: 2px solid white;
   display: inline-block;
+}
+
+.list-one {
+  margin-bottom: 100px;
+}
+
+.phoneicon {
+  float: right;
+}
+
+.overlay {
+  margin-bottom: 200px;
+}
+
+.firstPage {
+  background-image: url("../../photoshopLayers/background1.png");
+  background-size: 100%;
+  height: 950px;
+  background-repeat: no-repeat;
+}
+
+.sidebar {
+  transform: rotate(-90deg);
+  float: right;
+  width: 200px;
+
+
+}
+
+.honor {
+  margin-left: 20%;
+  color: orange;
+}
+
+.secondPage {
+  background-image: url("../../photoshopLayers/purpleback.png");
+  background-size: 100%;
+  height: 950px;
+  background-repeat: no-repeat;
 }
