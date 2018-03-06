@@ -1,11 +1,24 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   margin-left: 15%;
   margin-right: 15%;
   text-align: center;
 }
+h1 {
+  margin: auto;
+}
 
 h2 {
   color: white;
+}
+
+h4 {
+  color: orange;
+  font-size: 23px;
 }
 
 a {
@@ -23,48 +36,137 @@ li {
   display: inline;
 }
 
+.white {
+  color: white;
+  margin: auto;
+}
+
+.paragraph {
+  color: white;
+}
+
 .unity {
   color: white;
-  margin-top: 80px;
+  margin-top: 250px;
   border: 2px solid white;
   display: inline-block;
 }
 
 .list-one {
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .phoneicon {
+  position: relative;
+  bottom: 320px; right: 20px;
   float: right;
+  display: block;
+  box-sizing: border-box;
+  background: url("../../photoshopLayers/phoneicon.png") no-repeat;
+  width: 55px;
+  height: 300px;
+  padding-left: 55px;
+
 }
 
-.overlay {
-  margin-bottom: 200px;
+.invent {
+  font-size: 10px;
 }
 
 .firstPage {
   background-image: url("../../photoshopLayers/background1.png");
   background-size: 100%;
-  height: 950px;
+  height: 900px;
   background-repeat: no-repeat;
 }
 
 .sidebar {
   transform: rotate(-90deg);
   float: right;
-  width: 200px;
-
+  position: relative;
+  left: 75px; top: 55px;
 
 }
 
+.complex {
+  height: 100px;
+  width: 22%;
+  float: left;
+  position: relative;
+  left: 65px; top: 100px;
+}
+
+.wedo {
+  width: 60%;
+  float: right;
+  text-align: left;
+  position: relative;
+  top: 100px; right: 44px;
+}
+
+.first-line {
+  margin-left: 15%;
+  margin-right: 15%
+}
+
+.column {
+  width: 30%;
+  display: inline-block;
+  margin-top: 150px;
+}
+
+.lefty {
+  float: left;
+}
+
+.righty {
+  float: right;
+}
+
+.middle {
+
+}
+
+.stretch {
+  width: 100%;
+  height: 100px;
+  margin-top: 100px;
+}
+
 .honor {
-  margin-left: 20%;
+  margin-left: 30%;
+  margin-right: 30%;
   color: orange;
+}
+
+.align {
+  margin-top: 150px;
+}
+
+.line1 {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../../photoshopLayers/orangeline.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  padding-left: 35px;
+  position: relative;
+  top: 110px; right: 250px;
 }
 
 .secondPage {
   background-image: url("../../photoshopLayers/purpleback.png");
-  background-size: 100%;
-  height: 950px;
+  height: 900px;
   background-repeat: no-repeat;
+  margin: auto;
+
+}
+
+.thirdPage {
+  background-image: url("../../photoshopLayers/WeAreUnity.png");
+  background-size: 100%;
+  height: 900px;
+  background-repeat: no-repeat;
+  margin: auto;
 }
