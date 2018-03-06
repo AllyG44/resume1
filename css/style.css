@@ -41,7 +41,7 @@ li {
   margin: auto;
   text-align: left;
   position: relative;
-  top: 40px; left: 330px;
+  top: 40px; left: 280px;
 }
 
 .column2 {
@@ -78,7 +78,7 @@ li {
   margin: auto;
   text-align: left;
   position: relative;
-  top: 40px; left: 330px
+  top: 40px; left: 280px
 }
 
 .sidebar {
@@ -101,11 +101,11 @@ li {
 
 .wedo {
   color: white;
-  width: 60%;
+  width: 55%;
   float: right;
   text-align: left;
   position: relative;
-  top: 100px; right: 44px;
+  top: 120px; right: 44px;
 }
 
 .first-line {
@@ -139,7 +139,7 @@ li {
 .whitescroll {
   color: white;
   position: relative;
-  top: 50px; left: 18px;
+  top: 50px; left: 23px;
   font-size: 18px;
 }
 
@@ -168,7 +168,7 @@ li {
   height: 20px;
   padding-left: 35px;
   position: relative;
-  top: 110px; right: 250px;
+  top: 110px; right: 210px;
 }
 
 .line2 {
@@ -181,7 +181,7 @@ li {
   padding-left: 50px;
   padding-right: 50px;
   position: relative;
-  top: 90px; right: 200px;
+  top: 90px; right: 160px;
 }
 
 .first {
@@ -189,6 +189,7 @@ li {
   background-size: 100%;
   height: 900px;
   background-repeat: no-repeat;
+  margin: auto;
 }
 
 .second {
@@ -209,6 +210,7 @@ li {
 
 .fourth {
   background-image: url("../../photoshopLayers/whiteback.png");
+  background-size: 100%;
   height: 900px;
   background-repeat: no-repeat;
   margin: auto;
@@ -216,6 +218,7 @@ li {
 
 .fifth {
   background-image: url("../../photoshopLayers/snowback.png");
+  background-size: 100%;
   height: 900px;
   background-repeat: no-repeat;
   margin: auto;
@@ -247,7 +250,7 @@ li {
   padding-left: 50px;
   padding-right: 50px;
   position: relative;
-  top: 88px; left: 442px;
+  top: 88px; left: 408px;
 }
 
 .downarrow {
@@ -260,7 +263,7 @@ li {
   padding-left: 50px;
   padding-right: 50px;
   position: relative;
-  top: 90px; left: 458px;
+  top: 90px; left: 423px;
 }
 
 .box {
@@ -271,7 +274,8 @@ li {
   width: 500px;
   height: 500px;
   position: relative;
-  top: 55px; left: 320px;
+  top: 55px; left: 270px;
+  z-index: 0;
 }
 
 .underline {
@@ -291,7 +295,19 @@ li {
   width: 500px;
   height: 500px;
   position: relative;
-  bottom: 295px; left: 190px;
+  bottom: 295px; left: 150px;
+}
+
+.brush {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../../photoshopLayers/brush-box.png") no-repeat;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  bottom: 787px; left: 460px;
+  z-index: 1;
 }
 
 .icon1 {
@@ -322,4 +338,33 @@ li {
   width: 50px;
   position: relative;
   left: 10px; bottom: 40px;
+}
+
+.detail {
+  font-size: 44px;
+  color: black;
+  margin: auto;
+  text-align: right;
+  position: relative;
+  width: 30px;
+  bottom: 688px; left: 20px;
+}
+
+.four {
+  color: black;
+  margin: auto;
+  text-align: right;
+  position: relative;
+  bottom: 600px; right: 320px;
+}
+
+.blackbox {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../../photoshopLayers/blackbox.png") no-repeat;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  bottom: 325px; left: 295px;
 }
