@@ -4,8 +4,6 @@
 }
 
 body {
-  margin-left: 15%;
-  margin-right: 15%;
   text-align: center;
 }
 h1 {
@@ -34,6 +32,10 @@ ul {
 li {
   color: white;
   display: inline;
+}
+
+.container {
+  width: 100%;
 }
 
 .white {
@@ -189,15 +191,12 @@ li {
   background-size: 100%;
   height: 900px;
   background-repeat: no-repeat;
-  margin: auto;
 }
 
 .second {
   background-image: url("../../photoshopLayers/purpleback.png");
   height: 900px;
   background-repeat: no-repeat;
-  margin: auto;
-
 }
 
 .third {
@@ -205,7 +204,6 @@ li {
   background-size: 100%;
   height: 900px;
   background-repeat: no-repeat;
-  margin: auto;
 }
 
 .fourth {
@@ -213,15 +211,13 @@ li {
   background-size: 100%;
   height: 900px;
   background-repeat: no-repeat;
-  margin: auto;
 }
 
 .fifth {
   background-image: url("../../photoshopLayers/snowback.png");
   background-size: 100%;
-  height: 900px;
+  height: 1200px;
   background-repeat: no-repeat;
-  margin: auto;
 }
 
 .p3 {
@@ -241,16 +237,11 @@ li {
 }
 
 .scroll {
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   background: url("../../photoshopLayers/scroll.png") no-repeat;
   width: 30px;
   height: 75px;
   padding-left: 50px;
   padding-right: 50px;
-  position: relative;
-  top: 88px; left: 408px;
 }
 
 .downarrow {
@@ -347,7 +338,7 @@ li {
   text-align: right;
   position: relative;
   width: 30px;
-  bottom: 688px; left: 20px;
+  bottom: 695px; left: 80px;
 }
 
 .four {
@@ -355,7 +346,7 @@ li {
   margin: auto;
   text-align: right;
   position: relative;
-  bottom: 600px; right: 320px;
+  bottom: 700px; right: 230px;
 }
 
 .blackbox {
@@ -367,4 +358,31 @@ li {
   height: 500px;
   position: relative;
   bottom: 325px; left: 295px;
+}
+
+.global {
+  font-size: 44px;
+  position: relative;
+  top: 544px;
+}
+
+.five {
+  font-size: 35px;
+  position: relative;
+  top: 544px;
+}
+
+.reviews {
+  position: relative;
+  top: 600px;
+}
+
+.blackline {
+  display: block;
+  box-sizing: border-box;
+  background: url("../../photoshopLayers/blackline.png") no-repeat;
+  width: 5px;
+  height: 80px;
+  position: relative;
+  top: 565px; left: 390px;
 }
