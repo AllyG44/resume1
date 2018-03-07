@@ -1,388 +1,448 @@
-*{
-  margin: 0px;
-  padding: 0px;
+*
+{
+    box-sizing: border-box;
 }
 
-body {
-  text-align: center;
-}
-h1 {
-  margin: auto;
+body
+{
+    text-align: center;
 }
 
-h2 {
-  color: white;
+h4
+{
+    font-size: 23px;
+    color: orange;
 }
 
-h4 {
-  color: orange;
-  font-size: 23px;
+a
+{
+    font-size: 10px;
+    text-decoration: none;
+    color: white;
+    text-stroke: 1px solid black;
 }
 
-a {
-  font-size: 10px;
+ul
+{
+    text-align: center;
+    list-style-type: none;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+li
+{
+    display: inline;
+    color: white;
 }
 
-li {
-  color: white;
-  display: inline;
+.container
+{
+    width: 100%;
 }
 
-.container {
+.first
+{
+    position: relative;
+    height: 1300px;
+    background-image: url('../../photoshopLayers/background1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.phoneicon
+{
+    position: absolute;
+    right: 2.5%;
+    top: 15%;
+    display: block;
+    float: right;
+    width: 55px;
+    height: 300px;
+    padding-left: 55px;
+    background: url('../../photoshopLayers/phoneicon.png') no-repeat;
+}
+
+.unity
+{
+    font-size: 40px;
+    display: inline-block;
+    margin-top: 250px;
+    color: white;
+    border: 2px solid white;
+}
+
+.firstnav {
   width: 100%;
 }
 
-.white {
-  color: white;
-  margin: auto;
-  text-align: left;
+.list-one
+{
+  margin: 50px auto;
+  text-transform: uppercase;
+  word-spacing: 5px;
   position: relative;
-  top: 40px; left: 280px;
 }
 
-.column2 {
-  color: white;
+.sidebar
+{
+    margin-top: 50px;
+    float: right;
+    transform: rotate(-90deg);
 }
 
-.unity {
-  color: white;
-  margin-top: 250px;
-  border: 2px solid white;
-  display: inline-block;
-}
-
-.list-one {
-  margin-bottom: 150px;
-}
-
-.phoneicon {
-  position: relative;
-  bottom: 320px; right: 20px;
-  float: right;
-  display: block;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/phoneicon.png") no-repeat;
-  width: 55px;
-  height: 300px;
-  padding-left: 55px;
-
-}
-
-.invent {
-  font-size: 10px;
-  color: white;
-  margin: auto;
-  text-align: left;
-  position: relative;
-  top: 40px; left: 280px
-}
-
-.sidebar {
-  transform: rotate(-90deg);
-  float: right;
-  position: relative;
-  left: 75px; top: 55px;
-
-}
-
-.complex {
-  height: 100px;
-  width: 22%;
-  text-align: left;
-  font-size: 50px;
-  float: left;
-  position: relative;
-  left: 60px; top: 50px;
-}
-
-.wedo {
-  color: white;
-  width: 55%;
-  float: right;
-  text-align: left;
-  position: relative;
-  top: 120px; right: 44px;
-}
-
-.first-line {
-  margin-left: 15%;
-  margin-right: 15%
-}
-
-.column {
-  text-align: left;
-  width: 30%;
-  display: inline-block;
-  margin-top: 150px;
-}
-
-.lefty {
-  float: left;
-  position: relative;
-  left: 25px;
-}
-
-.righty {
-  float: right;
-  position: relative;
-  right: 25px;
-}
-
-.middle {
-
-}
-
-.whitescroll {
-  color: white;
-  position: relative;
-  top: 50px; left: 23px;
-  font-size: 18px;
-}
-
-.stretch {
-  width: 100%;
-  height: 100px;
-  margin-top: 100px;
-}
-
-.honor {
-  margin-left: 30%;
+.honor
+{
+  font-size: 60px;
+  margin-top: 20%;
   margin-right: 30%;
+  margin-left: 30%;
   color: orange;
 }
 
-.align {
-  margin-top: 150px;
-}
-
-.line1 {
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/orangeline.png") no-repeat;
-  width: 20px;
-  height: 20px;
-  padding-left: 35px;
-  position: relative;
-  top: 110px; right: 210px;
-}
-
-.line2 {
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/dash.png") no-repeat;
-  width: 30px;
-  height: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-  position: relative;
-  top: 90px; right: 160px;
-}
-
-.first {
-  background-image: url("../../photoshopLayers/background1.png");
-  background-size: 100%;
-  height: 900px;
-  background-repeat: no-repeat;
-}
-
-.second {
-  background-image: url("../../photoshopLayers/purpleback.png");
-  height: 900px;
-  background-repeat: no-repeat;
-}
-
-.third {
-  background-image: url("../../photoshopLayers/WeAreUnity.png");
-  background-size: 100%;
-  height: 900px;
-  background-repeat: no-repeat;
-}
-
-.fourth {
-  background-image: url("../../photoshopLayers/whiteback.png");
-  background-size: 100%;
-  height: 900px;
-  background-repeat: no-repeat;
-}
-
-.fifth {
-  background-image: url("../../photoshopLayers/snowback.png");
-  background-size: 100%;
-  height: 1200px;
-  background-repeat: no-repeat;
-}
-
-.p3 {
-  position: relative;
-  top: 120px;
-}
-
-.play {
-  position: relative;
-  top: 200px; left: 50%;
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/playbutton.png") no-repeat;
-  width: 64px;
-  height: 64px;
+.first-line
+{
+    color: white;
+    margin-right: 28%;
+    margin-left: 28%;
 }
 
 .scroll {
-  background: url("../../photoshopLayers/scroll.png") no-repeat;
-  width: 30px;
-  height: 75px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.downarrow {
   display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/downarrow.png") no-repeat;
-  width: 30px;
-  height: 75px;
-  padding-left: 50px;
-  padding-right: 50px;
-  position: relative;
-  top: 90px; left: 423px;
 }
 
-.box {
+.whitescroll
+{
+    font-size: 17px;
+    margin-right: 1%;
+    margin-top: 10%;
+    color: white;
+}
+
+.downarrow
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: 8%;
+    margin-left: 49%;
+    background: url('../../photoshopLayers/downarrow.png') no-repeat;
+}
+
+/* Here starts second section */
+.second
+{
+    height: 1300px;
+    background-image: url('../../photoshopLayers/purpleback.png');
+    background-repeat: no-repeat;
+}
+
+.white
+{
+    margin-left: 41%;
+    margin-top: 0;
+    text-align: left;
+    color: white;
+}
+
+.invent
+{
+    font-size: 10px;
+    margin-left: 41%;
+    margin-top: 0;
+    text-align: left;
+    color: white;
+}
+
+.stretch
+{
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+}
+
+.complex
+{
+    color: white;
+    font-size: 50px;
+    margin-left: 12%;
+    float: left;
+    width: 22%;
+    height: 100px;
+    text-align: left;
+}
+
+.wedo
+{
+    position: relative;
+    top: 120px;
+    right: 44px;
+    float: right;
+    width: 55%;
+    text-align: left;
+    color: white;
+}
+
+.align
+{
+    margin-top: 400px;
+}
+
+.lefty
+{
+    position: relative;
+    left: 25px;
+    float: left;
+}
+
+.icon1
+{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url('../../photoshopLayers/handmade.png') no-repeat;
+}
+
+.underline
+{
+    display: block;
+    width: 44px;
+    height: 10px;
+    background: url('../../photoshopLayers/underline.png') no-repeat;
+}
+
+
+
+.icon2
+{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url('../../photoshopLayers/creative.png') no-repeat;
+}
+
+.column2
+{
+    color: white;
+}
+
+.line1
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 4%;
+    padding-left: 35px;
+    background: url('../../photoshopLayers/orangeline.png') no-repeat;
+}
+
+.line2
+{
+    width: 30px;
+    height: 20px;
+    margin-left: 33%;
+    margin-top: 8%;
+    padding-right: 50px;
+    background: url('../../photoshopLayers/dash.png') no-repeat;
+}
+
+.righty
+{
+    position: relative;
+    right: 25px;
+    float: right;
+}
+
+.icon3
+{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url('../../photoshopLayers/support.png') no-repeat;
+}
+
+.column
+{
+    display: inline-block;
+    width: 30%;
+    margin-top: 150px;
+    text-align: left;
+}
+
+
+/* Here starts the third section */
+.third
+{
+    background-image: url('../../photoshopLayers/WeAreUnity.png');
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.p3
+{
+    margin-top: 0px;
+}
+
+.play
+{
+    position: relative;
+    top: 200px;
+    left: 50%;
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url('../../photoshopLayers/playbutton.png') no-repeat;
+}
+
+
+/* Here starts the fourth section */
+.fourth
+{
+    z-index: auto;
+    height: 900px;
+    background-image: url('../../photoshopLayers/whiteback.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.blackbox
+{
+    position: relative;
+    bottom: 325px;
+    left: 295px;
+    display: block;
+    width: 500px;
+    height: 500px;
+    background: url('../../photoshopLayers/blackbox.png') no-repeat;
+}
+
+.detail
+{
+    font-size: 44px;
+    position: relative;
+    bottom: 695px;
+    left: 80px;
+    width: 30px;
+    margin: auto;
+    text-align: right;
+    color: black;
+}
+
+.frame {
+  float: left;
   display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/whitebox.png") no-repeat;
-  width: 500px;
-  height: 500px;
-  position: relative;
-  top: 55px; left: 270px;
-  z-index: 0;
+  margin-left: 5%;
+  background: url('../../photoshopLayers/03Frame.png') no-repeat;
 }
 
-.underline {
+.four
+{
+    position: relative;
+    right: 230px;
+    bottom: 700px;
+    margin: auto;
+    text-align: right;
+    color: black;
+}
+
+
+/* Here starts the fifth section */
+.fifth
+{
+    height: 1300px;
+    background-image: url('../../photoshopLayers/snowback.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.fif {
+  margin-top: 0 auto;
+}
+
+.global
+{
+    font-size: 44px;
+    position: relative;
+    top: 544px;
+}
+
+.stars {
+  margin: 0 auto;
+  margin-top: 55%;
+}
+
+.five
+{
+    font-size: 35px;
+    position: relative;
+    top: 544px;
+}
+
+.blackline
+{
+    position: relative;
+    top: 565px;
+    left: 50%;
+    display: block;
+    box-sizing: border-box;
+    width: 5px;
+    height: 80px;
+    background: url('../../photoshopLayers/blackline.png') no-repeat;
+}
+
+.reviews
+{
+    position: relative;
+    top: 600px;
+}
+
+.stars {
+
+}
+
+.left {
+
+}
+
+.center {
+
+}
+
+.right {
+
+}
+
+.area {
+
+}
+
+/* Here starts the footer */
+.footer {
+  background-color: grey;
+}
+
+.tinyphone {
   display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/underline.png") no-repeat;
-  height: 10px;
-  width: 44px;
+  width: 20px;
+  height: 20px;
+  background: url('../../photoshopLayers/tinyphone.png') no-repeat;
+  margin-left: 10%;
 }
 
-.uno {
+.foot {
+  margin-right: 60%;
+}
+
+.unity2 {
+  font-size: 40px;
+  display: inline-block;
+  margin-bottom: 100px;
+  color: white;
+  border: 2px solid white;
+}
+
+.mail {
   display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/01.png") no-repeat;
-  width: 500px;
-  height: 500px;
-  position: relative;
-  bottom: 295px; left: 150px;
-}
-
-.brush {
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/brush-box.png") no-repeat;
-  width: 500px;
-  height: 500px;
-  position: relative;
-  bottom: 787px; left: 460px;
-  z-index: 1;
-}
-
-.icon1 {
-  display: block;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/handmade.png") no-repeat;
-  height: 50px;
-  width: 50px;
-  position: relative;
-  left: 10px; bottom: 40px;
-}
-
-.icon2 {
-  display: block;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/creative.png") no-repeat;
-  height: 50px;
-  width: 50px;
-  position: relative;
-  left: 10px; bottom: 40px;
-}
-
-.icon3 {
-  display: block;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/support.png") no-repeat;
-  height: 50px;
-  width: 50px;
-  position: relative;
-  left: 10px; bottom: 40px;
-}
-
-.detail {
-  font-size: 44px;
-  color: black;
-  margin: auto;
-  text-align: right;
-  position: relative;
-  width: 30px;
-  bottom: 695px; left: 80px;
-}
-
-.four {
-  color: black;
-  margin: auto;
-  text-align: right;
-  position: relative;
-  bottom: 700px; right: 230px;
-}
-
-.blackbox {
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/blackbox.png") no-repeat;
-  width: 500px;
-  height: 500px;
-  position: relative;
-  bottom: 325px; left: 295px;
-}
-
-.global {
-  font-size: 44px;
-  position: relative;
-  top: 544px;
-}
-
-.five {
-  font-size: 35px;
-  position: relative;
-  top: 544px;
-}
-
-.reviews {
-  position: relative;
-  top: 600px;
-}
-
-.blackline {
-  display: block;
-  box-sizing: border-box;
-  background: url("../../photoshopLayers/blackline.png") no-repeat;
-  width: 5px;
-  height: 80px;
-  position: relative;
-  top: 565px; left: 390px;
+  width: 20px;
+  height: 20px;
+  background: url('../../photoshopLayers/mail.png') no-repeat;
+  margin-left: 90%;
 }
