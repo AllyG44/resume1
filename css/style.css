@@ -1,42 +1,47 @@
 *
 {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Abraham Lincoln';
+  font-weight: normal;
+  font-style: normal;
 }
 
 body
 {
-    text-align: center;
+  text-align: center;
+  /* TODO: remove this overflow */
+  overflow-x: hidden;
 }
 
 h4
 {
-    font-size: 23px;
-    color: orange;
+  font-size: 23px;
+  color: orange;
 }
 
 a
 {
-    font-size: 10px;
-    text-decoration: none;
-    color: white;
-    text-stroke: 1px solid black;
+  font-size: 10px;
+  text-decoration: none;
+  color: white;
+  text-stroke: 1px solid black;
 }
 
 ul
 {
-    text-align: center;
-    list-style-type: none;
+  text-align: center;
+  list-style-type: none;
 }
 
 li
 {
-    display: inline;
-    color: white;
+  display: inline;
+  color: white;
 }
 
 .container
 {
-    width: 100%;
+  width: 100%;
 }
 
 .first
@@ -48,10 +53,19 @@ li
     background-size: 100%;
 }
 
+.unity
+{
+    font-size: 40px;
+    display: inline-block;
+    margin-top: 230px;
+    color: white;
+    border: 2px solid white;
+}
+
 .phoneicon
 {
     position: absolute;
-    right: 2.5%;
+    right: 4%;
     top: 15%;
     display: block;
     float: right;
@@ -61,14 +75,6 @@ li
     background: url('../../photoshopLayers/phoneicon.png') no-repeat;
 }
 
-.unity
-{
-    font-size: 40px;
-    display: inline-block;
-    margin-top: 250px;
-    color: white;
-    border: 2px solid white;
-}
 
 .firstnav {
   width: 100%;
@@ -84,15 +90,14 @@ li
 
 .sidebar
 {
-    margin-top: 40px;
-    margin-left: 40px;
+    margin-top: 50px;
     float: right;
     transform: rotate(-90deg);
 }
 
 .honor
 {
-  font-size: 60px;
+  font-size: 70px;
   margin-top: 15%;
   margin-right: 30%;
   margin-left: 30%;
@@ -108,14 +113,17 @@ li
 
 .scroll {
   display: block;
-  margin-left: 45%;
+  margin-left: 47%;
+  margin-top: 5%;
+  margin-bottom: 0;
 }
 
 .whitescroll
 {
     font-size: 26px;
-    margin-right: 1%;
-    margin-top: 10%;
+    margin-right: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
     color: white;
 }
 
@@ -124,17 +132,20 @@ li
     display: block;
     width: 20px;
     height: 20px;
-    margin-top: 8%;
+    margin-top: 3%;
     margin-left: 49%;
+    margin-bottom: 0;
     background: url('../../photoshopLayers/downarrow.png') no-repeat;
 }
 
 .box {
   background: url('../../photoshopLayers/whitebox.png') no-repeat;
   display: block;
-  height: 100%;
-  width: 100%;
-  margin-left: 34%;
+  height: 50%;
+  width: 50%;
+  margin-left: 30%;
+  margin-right: 0;
+  margin-top: 1%;
 }
 
 /* Here starts second section */
@@ -145,21 +156,26 @@ li
     background-repeat: no-repeat;
 }
 
+.one {
+
+}
+
 .white
 {
-    margin-left: 41%;
-    margin-top: 0;
+    font-size: 85px;
+    margin: 0 auto;
     text-align: left;
     color: white;
+    width: 36%;
 }
 
 .invent
 {
-    font-size: 10px;
-    margin-left: 41%;
-    margin-top: 0;
+    font-size: 22px;
+    margin: 0 auto;
     text-align: left;
     color: white;
+    width: 36%;
 }
 
 .stretch
@@ -167,16 +183,18 @@ li
     width: 80%;
     height: 100px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 200px;
+    margin-bottom: 0;
 }
 
 .complex
 {
     color: white;
-    font-size: 50px;
-    margin-left: 12%;
+    font-size: 65px;
+    margin-left: 2%;
+    margin-bottom: 0;
     float: left;
-    width: 22%;
+    width: 26%;
     height: 100px;
     text-align: left;
 }
@@ -187,14 +205,18 @@ li
     top: 120px;
     right: 44px;
     float: right;
-    width: 55%;
+    width: 50%;
     text-align: left;
     color: white;
+    font-size: 15px;
+    word-spacing: 6px;
 }
 
 .align
 {
-    margin-top: 320px;
+    margin-top: 250px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .lefty
@@ -235,8 +257,31 @@ li
     color: white;
 }
 
+.righty
+{
+    position: relative;
+    right: 25px;
+    float: right;
+}
+
+.icon3
+{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url('../../photoshopLayers/support.png') no-repeat;
+}
+
+.column
+{
+    display: inline-block;
+    width: 30%;
+    margin-top: 100px;
+    text-align: left;
+}
+
 .lines {
-  margin-top: 10%;
+  margin-top: 8%;
   margin-right: 50px;
 }
 
@@ -257,35 +302,12 @@ li
     background: url('../../photoshopLayers/dash.png') no-repeat;
 }
 
-.righty
-{
-    position: relative;
-    right: 25px;
-    float: right;
-}
-
-.icon3
-{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: url('../../photoshopLayers/support.png') no-repeat;
-}
-
-.column
-{
-    display: inline-block;
-    width: 30%;
-    margin-top: 150px;
-    text-align: left;
-}
-
 
 /* Here starts the third section */
 .third
 {
     background-image: url('../../photoshopLayers/WeAreUnity.png');
-    height: 900px;
+    height: 1000px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -297,15 +319,22 @@ li
     margin-top: 0px;
 }
 
+.love {
+  font-size: 80px;
+  margin: 0 auto;
+}
+
+.pride {
+  font-size: 20px;
+}
+
 .play
 {
     position: relative;
-    top: 300px;
-    left: 50%;
+    top: 240px;
+    left: 39%;
     display: block;
-    width: 64px;
-    height: 64px;
-    background: url('../../photoshopLayers/playbutton.png') no-repeat;
+
 }
 
 
@@ -313,7 +342,7 @@ li
 .fourth
 {
     background-color: white;
-    height: 900px;
+    height: 1000px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -321,8 +350,8 @@ li
 .blackbox
 {
     position: relative;
-    bottom: 325px;
-    left: 295px;
+    bottom: 222px;
+    left: 35%;
     display: block;
     width: 500px;
     height: 500px;
@@ -331,64 +360,74 @@ li
 
 .detail
 {
-    font-size: 44px;
+    font-size: 60px;
     position: relative;
-    bottom: 695px;
-    left: 80px;
-    width: 30px;
+    bottom: 500px;
+    left: 100px;
+    height: 0px;
+    width: 244px;
     margin: auto;
     text-align: right;
     color: black;
-}
-
-.frame {
-  float: left;
-  display: block;
-  margin-left: 5%;
-  background: url('../../photoshopLayers/03Frame.png') no-repeat;
 }
 
 .four
 {
     position: relative;
-    right: 230px;
-    bottom: 700px;
+    right: 35%;
+    bottom: 350px;
     margin: auto;
+    font-size: 25px;
     text-align: right;
     color: black;
+}
+
+}
+/*
+.two {
+  background: url("../../photoshopLayers/number2.png");
+  position: relative;
+  left: 70%;
+  bottom: 650px;
+  z-index: 1000;
+}
+*/
+
+.frame {
+
 }
 
 
 /* Here starts the fifth section */
 .fifth
 {
-    height: 1300px;
+    height: 1500px;
     background-image: url('../../photoshopLayers/snowback.png');
     background-repeat: no-repeat;
     background-size: 100%;
+    margin-top: 0px;
 }
 
 .fif {
-  margin-top: 0 auto;
+  position: relative;
+  top: 20%;
 }
 
 .global
 {
-    font-size: 44px;
+    font-size: 60px;
     position: relative;
     top: 544px;
+    margin: 0 auto;
 }
 
 .five
 {
-    font-size: 35px;
+    font-size: 30px;
     position: relative;
     top: 544px;
-}
-
-.stars {
-  margin: 0 auto;
-  margin-top: 55%;
+    width: 764px;
+    margin: 0 auto;
 }
 
 .blackline
@@ -405,27 +444,42 @@ li
 
 .reviews
 {
+    font-size: 20px;
     position: relative;
     top: 600px;
+    margin: 0 auto;
 }
 
 .stars {
-
+  position: relative;
+  left: 20%;
+  top: 65%;
+  margin: 0 auto;
 }
 
 .left {
-
+  border: 1px;
+  float: left;
 }
 
 .center {
-
+  border: 1px;
+  float: left;
+  background-color: #694fca;
 }
 
 .right {
-
+  border: 1px;
+  float: left;
 }
 
 .area {
+  height: 350px;
+  width: 250px;
+  margin: 0px 10px;
+}
+
+.name {
 
 }
 
@@ -449,7 +503,7 @@ li
 .unity2 {
   font-size: 40px;
   display: inline-block;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   color: white;
   border: 2px solid white;
 }
@@ -460,4 +514,11 @@ li
   height: 20px;
   background: url('../../photoshopLayers/mail.png') no-repeat;
   margin-left: 90%;
+}
+
+/* Font Section*/
+.gotham {
+  font-family: 'Gotham Black';
+  font-weight: normal;
+  font-style: normal;
 }
