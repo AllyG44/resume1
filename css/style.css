@@ -78,13 +78,14 @@ li
 {
   margin: 50px auto;
   text-transform: uppercase;
-  word-spacing: 5px;
+  word-spacing: 10px;
   position: relative;
 }
 
 .sidebar
 {
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-left: 40px;
     float: right;
     transform: rotate(-90deg);
 }
@@ -92,7 +93,7 @@ li
 .honor
 {
   font-size: 60px;
-  margin-top: 20%;
+  margin-top: 15%;
   margin-right: 30%;
   margin-left: 30%;
   color: orange;
@@ -107,11 +108,12 @@ li
 
 .scroll {
   display: block;
+  margin-left: 45%;
 }
 
 .whitescroll
 {
-    font-size: 17px;
+    font-size: 26px;
     margin-right: 1%;
     margin-top: 10%;
     color: white;
@@ -127,11 +129,19 @@ li
     background: url('../../photoshopLayers/downarrow.png') no-repeat;
 }
 
+.box {
+  background: url('../../photoshopLayers/whitebox.png') no-repeat;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-left: 34%;
+}
+
 /* Here starts second section */
 .second
 {
     height: 1300px;
-    background-image: url('../../photoshopLayers/purpleback.png');
+    background-color: #694fca;
     background-repeat: no-repeat;
 }
 
@@ -154,8 +164,9 @@ li
 
 .stretch
 {
-    width: 100%;
+    width: 80%;
     height: 100px;
+    margin: 0 auto;
     margin-top: 100px;
 }
 
@@ -183,7 +194,7 @@ li
 
 .align
 {
-    margin-top: 400px;
+    margin-top: 320px;
 }
 
 .lefty
@@ -224,11 +235,16 @@ li
     color: white;
 }
 
+.lines {
+  margin-top: 10%;
+  margin-right: 50px;
+}
+
 .line1
 {
     width: 20px;
     height: 20px;
-    margin-left: 4%;
+    margin-right: 2%;
     padding-left: 35px;
     background: url('../../photoshopLayers/orangeline.png') no-repeat;
 }
@@ -237,8 +253,6 @@ li
 {
     width: 30px;
     height: 20px;
-    margin-left: 33%;
-    margin-top: 8%;
     padding-right: 50px;
     background: url('../../photoshopLayers/dash.png') no-repeat;
 }
@@ -278,13 +292,15 @@ li
 
 .p3
 {
+    position: relative;
+    top: 175px;
     margin-top: 0px;
 }
 
 .play
 {
     position: relative;
-    top: 200px;
+    top: 300px;
     left: 50%;
     display: block;
     width: 64px;
@@ -296,9 +312,8 @@ li
 /* Here starts the fourth section */
 .fourth
 {
-    z-index: auto;
+    background-color: white;
     height: 900px;
-    background-image: url('../../photoshopLayers/whiteback.png');
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -364,16 +379,16 @@ li
     top: 544px;
 }
 
-.stars {
-  margin: 0 auto;
-  margin-top: 55%;
-}
-
 .five
 {
     font-size: 35px;
     position: relative;
     top: 544px;
+}
+
+.stars {
+  margin: 0 auto;
+  margin-top: 55%;
 }
 
 .blackline
