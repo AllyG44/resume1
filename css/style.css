@@ -1,524 +1,104 @@
-*
-{
-  box-sizing: border-box;
-  font-family: 'Abraham Lincoln';
-  font-weight: normal;
-  font-style: normal;
+body {
+  text-transform: uppercase;
 }
 
-body
-{
-  text-align: center;
-  /* TODO: remove this overflow */
-  overflow-x: hidden;
+li {
+  display: inline;
+  list-style-type: none;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 15px;
 }
 
-h4
-{
-  font-size: 23px;
-  color: orange;
-}
-
-a
-{
-  font-size: 10px;
+a {
   text-decoration: none;
   color: white;
   text-stroke: 1px solid black;
 }
 
-ul
-{
-  text-align: center;
-  list-style-type: none;
-}
-
-li
-{
-  display: inline;
+header h3 {
+  font-family: 'Gotham Black';
+  font-weight: lighter;
+  letter-spacing: 0.06em;
   color: white;
+  font-size: 35px;
+  border: 2px solid white;
+  padding: 8px;
+  display: inline-block;
+  margin-top: 15%;
+  margin-left: 43%;
 }
 
-.container
-{
-  width: 100%;
+nav {
+  font-family: 'Abraham Lincoln';
 }
-
-.first
-{
-    position: relative;
-    height: 1300px;
-    background-image: url('../../photoshopLayers/background1.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.unity
-{
-    font-size: 40px;
-    display: inline-block;
-    margin-top: 230px;
-    color: white;
-    border: 2px solid white;
-}
-
-.phoneicon
-{
-    position: absolute;
-    right: 4%;
-    top: 15%;
-    display: block;
-    float: right;
-    width: 55px;
-    height: 300px;
-    padding-left: 55px;
-    background: url('../../photoshopLayers/phoneicon.png') no-repeat;
-}
-
 
 .firstnav {
-  width: 100%;
+  text-align: center;
 }
 
-.list-one
-{
-  margin: 50px auto;
-  text-transform: uppercase;
-  word-spacing: 10px;
-  position: relative;
-}
-
-.sidebar
-{
-    margin-top: 50px;
-    float: right;
-    transform: rotate(-90deg);
-}
-
-.honor
-{
-  font-size: 70px;
-  margin-top: 15%;
-  margin-right: 30%;
-  margin-left: 30%;
-  color: orange;
-}
-
-.first-line
-{
-    color: white;
-    margin-right: 28%;
-    margin-left: 28%;
-}
-
-.scroll {
-  display: block;
-  margin-left: 47%;
-  margin-top: 5%;
+.phoneicon {
+  float: right;
+  margin-top: 13%;
+  margin-right: 4%;
   margin-bottom: 0;
 }
 
-.whitescroll
-{
-    font-size: 26px;
-    margin-right: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: white;
+.first {
+  height: 1250px;
+  background-image: url("../../photoshopLayers/background1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-.downarrow
-{
-    display: block;
-    width: 20px;
-    height: 20px;
-    margin-top: 3%;
-    margin-left: 49%;
-    margin-bottom: 0;
-    background: url('../../photoshopLayers/downarrow.png') no-repeat;
-}
-
-.box {
-  background: url('../../photoshopLayers/whitebox.png') no-repeat;
-  display: block;
-  height: 50%;
-  width: 50%;
-  margin-left: 30%;
-  margin-right: 0;
-  margin-top: 1%;
-}
-
-/* Here starts second section */
-.second
-{
-    height: 1300px;
-    background-color: #694fca;
-    background-repeat: no-repeat;
-}
-
-.one {
-
-}
-
-.white
-{
-    font-size: 85px;
-    margin: 0 auto;
-    text-align: left;
-    color: white;
-    width: 36%;
-}
-
-.invent
-{
-    font-size: 22px;
-    margin: 0 auto;
-    text-align: left;
-    color: white;
-    width: 36%;
-}
-
-.stretch
-{
-    width: 80%;
-    height: 100px;
-    margin: 0 auto;
-    margin-top: 200px;
-    margin-bottom: 0;
-}
-
-.complex
-{
-    color: white;
-    font-size: 65px;
-    margin-left: 2%;
-    margin-bottom: 0;
-    float: left;
-    width: 26%;
-    height: 100px;
-    text-align: left;
-}
-
-.wedo
-{
-    position: relative;
-    top: 120px;
-    right: 44px;
-    float: right;
-    width: 50%;
-    text-align: left;
-    color: white;
-    font-size: 15px;
-    word-spacing: 6px;
-}
-
-.align
-{
-    margin-top: 250px;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.lefty
-{
-    position: relative;
-    left: 25px;
-    float: left;
-}
-
-.icon1
-{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: url('../../photoshopLayers/handmade.png') no-repeat;
-}
-
-.underline
-{
-    display: block;
-    width: 44px;
-    height: 10px;
-    background: url('../../photoshopLayers/underline.png') no-repeat;
-}
-
-
-
-.icon2
-{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: url('../../photoshopLayers/creative.png') no-repeat;
-}
-
-.column2
-{
-    color: white;
-}
-
-.righty
-{
-    position: relative;
-    right: 25px;
-    float: right;
-}
-
-.icon3
-{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: url('../../photoshopLayers/support.png') no-repeat;
-}
-
-.column
-{
-    display: inline-block;
-    width: 30%;
-    margin-top: 100px;
-    text-align: left;
-}
-
-.lines {
-  margin-top: 8%;
-  margin-right: 50px;
-}
-
-.line1
-{
-    width: 20px;
-    height: 20px;
-    margin-right: 2%;
-    padding-left: 35px;
-    background: url('../../photoshopLayers/orangeline.png') no-repeat;
-}
-
-.line2
-{
-    width: 30px;
-    height: 20px;
-    padding-right: 50px;
-    background: url('../../photoshopLayers/dash.png') no-repeat;
-}
-
-
-/* Here starts the third section */
-.third
-{
-    background-image: url('../../photoshopLayers/WeAreUnity.png');
-    height: 1000px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.p3
-{
-    position: relative;
-    top: 175px;
-    margin-top: 0px;
-}
-
-.love {
-  font-size: 80px;
-  margin: 0 auto;
-}
-
-.pride {
-  font-size: 20px;
-}
-
-.play
-{
-    position: relative;
-    top: 240px;
-    left: 39%;
-    display: block;
-
-}
-
-
-/* Here starts the fourth section */
-.fourth
-{
-    background-color: white;
-    height: 1000px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.blackbox
-{
-    position: relative;
-    bottom: 222px;
-    left: 35%;
-    display: block;
-    width: 500px;
-    height: 500px;
-    background: url('../../photoshopLayers/blackbox.png') no-repeat;
-}
-
-.detail
-{
-    font-size: 60px;
-    position: relative;
-    bottom: 500px;
-    left: 100px;
-    height: 0px;
-    width: 244px;
-    margin: auto;
-    text-align: right;
-    color: black;
-}
-
-.four
-{
-    position: relative;
-    right: 35%;
-    bottom: 350px;
-    margin: auto;
-    font-size: 25px;
-    text-align: right;
-    color: black;
-}
-
-}
-/*
-.two {
-  background: url("../../photoshopLayers/number2.png");
-  position: relative;
-  left: 70%;
-  bottom: 650px;
-  z-index: 1000;
-}
-*/
-
-.frame {
-
-}
-
-
-/* Here starts the fifth section */
-.fifth
-{
-    height: 1500px;
-    background-image: url('../../photoshopLayers/snowback.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-top: 0px;
-}
-
-.fif {
-  position: relative;
-  top: 20%;
-}
-
-.global
-{
-    font-size: 60px;
-    position: relative;
-    top: 544px;
-    margin: 0 auto;
-}
-
-.five
-{
-    font-size: 30px;
-    position: relative;
-    top: 544px;
-    width: 764px;
-    margin: 0 auto;
-}
-
-.blackline
-{
-    position: relative;
-    top: 565px;
-    left: 50%;
-    display: block;
-    box-sizing: border-box;
-    width: 5px;
-    height: 80px;
-    background: url('../../photoshopLayers/blackline.png') no-repeat;
-}
-
-.reviews
-{
-    font-size: 20px;
-    position: relative;
-    top: 600px;
-    margin: 0 auto;
-}
-
-.stars {
-  position: relative;
-  left: 20%;
-  top: 65%;
-  margin: 0 auto;
-}
-
-.left {
-  border: 1px;
-  float: left;
-}
-
-.center {
-  border: 1px;
-  float: left;
-  background-color: #694fca;
-}
-
-.right {
-  border: 1px;
-  float: left;
-}
-
-.area {
-  height: 350px;
-  width: 250px;
-  margin: 0px 10px;
-}
-
-.name {
-
-}
-
-/* Here starts the footer */
-.footer {
-  background-color: grey;
-}
-
-.tinyphone {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: url('../../photoshopLayers/tinyphone.png') no-repeat;
-  margin-left: 10%;
-}
-
-.foot {
-  margin-right: 60%;
-}
-
-.unity2 {
-  font-size: 40px;
-  display: inline-block;
-  margin-bottom: 10px;
-  color: white;
-  border: 2px solid white;
-}
-
-.mail {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: url('../../photoshopLayers/mail.png') no-repeat;
-  margin-left: 90%;
-}
-
-/* Font Section*/
-.gotham {
-  font-family: 'Gotham Black';
-  font-weight: normal;
+.honor {
+  text-align: center;
+  font-family: 'Abraham Lincoln';
   font-style: normal;
+}
+
+.honor h1 {
+  text-align: center;
+  color: orange;
+  font-size: 70px;
+  letter-spacing: -0.03em;
+  font-weight: lighter;
+  margin-top: 19%;
+  margin-right: 0;
+}
+
+.honor h2 {
+  color: white;
+  font-weight: lighter;
+  margin: 0 auto;
+  width: 32%;
+}
+
+.scroll {
+  color: white;
+  margin-left: 47%;
+}
+
+.arch {
+  margin-top: 10%;
+  margin-bottom: 0;
+}
+
+.scroll p {
+  margin-top: 0;
+}
+
+.downarrow {
+  margin-left: 25px;
+  margin-top: 30px;
+}
+
+.sidebar {
+  transform: rotate(-90deg);
+  float: right;
+  position: relative;
+  left: 18%;
+  top: 350px;
+  z-index: 100;
 }
