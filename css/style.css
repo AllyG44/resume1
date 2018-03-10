@@ -102,3 +102,63 @@ nav {
   top: 350px;
   z-index: 100;
 }
+
+.pics {
+  position: relative;
+  left: 13%;
+  z-index: 100;
+}
+
+.uno {
+  position: relative;
+  left: 6%;
+}
+
+.brush-box {
+  position: relative;
+  left: 55%;
+  z-index: 1000;
+  margin: 0 auto;
+}
+
+.second {
+  background-color: #694fca;
+  height: 1300px;
+  background-repeat: no-repeat;
+}
+
+.invite-text {
+  position: relative;
+  top: 9%;
+  left: 2%;
+  font-family: 'Abraham Lincoln';
+  font-style: normal;
+  text-align: center;
+  margin-top: 0;
+  margin-left: 30%;
+  color: white;
+  width: 310px;
+  text-align: left;
+}
+
+.invite-text h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  transform: scaleY(1.4);
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.invite-text h4 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: lighter;
+  width: 410px;
+  letter-spacing: 1.5px;
+}
+
+.stretch {
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+}
