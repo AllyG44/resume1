@@ -421,7 +421,7 @@ nav {
 
 .winter {
   background-image: url("../../photoshopLayers/winter.png");
-  height: 1300px;
+  height: 2000px;
   background-repeat: no-repeat;
   background-size: 100%;
   margin-top: 0;
@@ -430,8 +430,47 @@ nav {
 .fif {
   font-family: 'Abraham Lincoln';
   text-align: center;
+  margin-top: 0%;
+  position: relative;
+  top: 44%;
 }
 
 .fif h1 {
-  font-size: 35px;
+  text-transform: uppercase;
+  font-size: 65px;
+  letter-spacing: 4px;
+}
+
+.fif h2 {
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  letter-spacing: 4px;
+  word-spacing: 2px;
+}
+
+.black-line {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.fif p {
+  font-family: 'Poppins';
+  font-weight: lighter;
+}
+
+.stars {
+  position: relative;
+  left: 24%;
+  top: 45%;
+  margin: 0 auto;
+}
+
+.area {
+  height: 350px;
+  width: 250px;
+  margin: 0px 10px;
+  border: 1px;
+  float: left;
 }
