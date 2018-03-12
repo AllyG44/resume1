@@ -301,5 +301,137 @@ nav {
 
 .play {
   position: relative;
-  top: 240px;
+  top: 190px;
+}
+
+.what-we-do {
+  background-color: white;
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.pencils {
+  position: relative;
+  bottom: 194px;
+  margin-left: 10%;
+}
+
+.pens {
+  position: relative;
+  bottom: 230px;
+  left: 149px;
+}
+
+.details {
+  font-family: 'Abraham Lincoln';
+  position: relative;
+  bottom: 674px;
+  right: 472px;
+  text-align: right;
+}
+
+.details h1 {
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  font-size: 68px;
+  font-weight: lighter;
+  margin: 0 auto;
+}
+
+.details p {
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.number-two {
+  position: relative;
+  left: 70%;
+  bottom: 150px;
+}
+
+.two-pencils {
+  margin-bottom: 4%;
+  margin-right: 10%;
+}
+
+.prev-next {
+  margin-top: 8%;
+  margin-left: 40%;
+}
+
+.bloc {
+  position: relative;
+  left: 35%;
+  bottom: 1040px;
+  width: 370px;
+}
+
+.bloc h1 {
+  font-family: 'Abraham Lincoln';
+  font-weight: lighter;
+  color: orange;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 54px;
+  z-index: 200;
+}
+
+.bloc p {
+  font-family: 'Poppins';
+  font-weight: lighter;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  color: white;
+  margin-top: 0;
+}
+
+.campaign-photography {
+
+}
+
+.campaign-creative {
+  font-family: 'Abraham Lincoln';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  left: 71%;
+  bottom: 1200px;
+  width: 120px;
+}
+
+.campaign-creative p {
+  margin-bottom: 50px;
+}
+
+.photography {
+  font-family: 'Abraham Lincoln';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  left: 86%;
+  bottom: 1405px;
+  width: 120px;
+}
+
+.photography p {
+  margin-bottom: 50px;
+}
+
+.winter {
+  background-image: url("../../photoshopLayers/winter.png");
+  height: 1300px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 0;
+}
+
+.fif {
+  font-family: 'Abraham Lincoln';
+  text-align: center;
+}
+
+.fif h1 {
+  font-size: 35px;
 }
