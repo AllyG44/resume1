@@ -362,9 +362,11 @@ nav {
 
 .bloc {
   position: relative;
-  left: 35%;
+  left: 34%;
   bottom: 1040px;
   width: 370px;
+  margin: 0 auto;
+  float: left;
 }
 
 .bloc h1 {
@@ -387,18 +389,17 @@ nav {
   margin-top: 0;
 }
 
-.campaign-photography {
-
-}
 
 .campaign-creative {
   font-family: 'Abraham Lincoln';
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
-  left: 71%;
-  bottom: 1200px;
+  right: 21.5%;
+  float: right;
+  bottom: 1024px;
   width: 120px;
+  margin: 0 auto;
 }
 
 .campaign-creative p {
@@ -410,9 +411,11 @@ nav {
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
-  left: 86%;
-  bottom: 1405px;
-  width: 120px;
+  left: 1%;
+  float: right;
+  bottom: 1024px;
+  width: 102px;
+  margin: 0 auto;
 }
 
 .photography p {
@@ -421,7 +424,7 @@ nav {
 
 .winter {
   background-image: url("../../photoshopLayers/winter.png");
-  height: 2000px;
+  height: 1770px;
   background-repeat: no-repeat;
   background-size: 100%;
   margin-top: 0;
@@ -432,7 +435,7 @@ nav {
   text-align: center;
   margin-top: 0%;
   position: relative;
-  top: 44%;
+  top: 49.5%;
 }
 
 .fif h1 {
@@ -462,15 +465,280 @@ nav {
 
 .stars {
   position: relative;
-  left: 24%;
-  top: 45%;
+  right: 5%;
+  top: 34%;
   margin: 0 auto;
 }
 
 .area {
   height: 350px;
-  width: 250px;
+  width: 230px;
   margin: 0px 10px;
   border: 1px;
   float: left;
+  text-align: center;
+}
+
+.area p {
+  font-size: 13px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.white {
+  background-color: white;
+}
+
+.center {
+  color: white;
+  background-color: #694fca;
+}
+
+.center h4, .jon {
+  color: orange;
+}
+
+.grey {
+  color: grey;
+}
+
+.footer {
+  background-color: #231F20;
+  height: 400px;
+}
+
+.footer p {
+  margin-top: 0;
+}
+
+.phone-number {
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  position: relative;
+  top: 50px;
+  left: 120px;
+  color: white;
+  font-size: 12px;
+  word-spacing: 3px;
+  width: 210px;
+}
+
+.phone-number .tinyphone {
+  float: left;
+  margin-right: 10px;
+}
+
+.unity-foot {
+  font-family: 'Gotham Black';
+  font-weight: lighter;
+  letter-spacing: 0.05em;
+  color: white;
+  font-size: 34px;
+  border: 2px solid white;
+  padding: 7px;
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 43%;
+}
+
+.mail {
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  position: relative;
+  top: 25px;
+  right: 188px;
+  font-size: 12px;
+  float: right;
+}
+
+.mail .tinymail {
+  float: left;
+  margin-right: 10px;
+}
+
+.mail p {
+  color: white;
+  float: left;
+  margin-right: 10px;
+}
+
+.mail .purple-mail {
+  color: #694fca;
+  float: right;
+}
+
+.about-us {
+  font-family: 'Poppins';
+  position: relative;
+  left: 10%;
+  bottom: 10%;
+  width: 480px;
+}
+
+.about-us h4 {
+  text-transform: uppercase;
+  color: white;
+}
+
+.research {
+  float: left;
+  margin-right: 20px;
+}
+
+.about-us p {
+  color: grey;
+  font-size: 10px;
+  width: 470px;
+  margin-right: 0;
+}
+
+.social-media {
+  margin-left: 40px;
+}
+
+.newsletter h4 {
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 196px;
+  right: 84px;
+}
+
+.newsletter p {
+  font-family: 'Poppins';
+  color: grey;
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: .5px;
+  word-spacing: 1px;
+  position: relative;
+  bottom: 190px;
+  left: 641px;
+  width: 200px;
+}
+
+.email {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: lighter;
+  background-color: #231F20;
+  position: relative;
+  bottom: 177px;
+  left: 640px;
+}
+
+.button {
+  font-family: 'Poppins';
+  font-size: 14px;
+  color: white;
+  font-weight: lighter;
+  background-color: #694fca;
+  position: relative;
+  bottom: 144px;
+  left: 475px;
+}
+
+.blog h4 {
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 301px;
+  left: 348px;
+  width: 140px;
+  margin: 0 auto;
+}
+
+.books {
+  float: right;
+  position: relative;
+  right: 310px;
+  bottom: 278px;
+}
+
+.need h5 {
+  font-family: 'Poppins';
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  color: white;
+  float: right;
+  position: relative;
+  bottom: 290px;
+  right: 33px;
+}
+
+.need p {
+  font-family: 'Poppins';
+  color: #694fca;
+  font-size: 10px;
+  float: right;
+  position: relative;
+  bottom: 255px;
+  left: 44px;
+}
+
+.dude {
+  float: right;
+  position: relative;
+  left: 11px;
+  bottom: 210px;
+}
+
+.dudely h5 {
+  font-family: 'Poppins';
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  color: white;
+  float: right;
+  position: relative;
+  bottom: 220px;
+  left: 277px;
+}
+
+.dudely p {
+  font-family: 'Poppins';
+  color: #694fca;
+  font-size: 10px;
+  float: right;
+  position: relative;
+  bottom: 185px;
+  left: 355px;
+}
+
+.skyscraper {
+  float: right;
+  position: relative;
+  left: 322px;
+  bottom: 142px;
+}
+
+.tall-building h5 {
+  font-family: 'Poppins';
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  color: white;
+  float: right;
+  position: relative;
+  bottom: 150px;
+  left: 659px;
+}
+
+.tall-building p {
+  font-family: 'Poppins';
+  color: #694fca;
+  font-size: 10px;
+  float: right;
+  position: relative;
+  bottom: 114px;
+  left: 738px;
 }
