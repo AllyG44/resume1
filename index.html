@@ -31,7 +31,7 @@
 
           <div class="col-md">
             <div class="btn-group dropright">
-              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button type="button" class="btn btn-secondary dropdown-toggle rounded-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 LOG IN
               </button>
               <div class="dropdown-menu">
@@ -41,7 +41,7 @@
 
           <div class="col-md">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   EN
                 </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -60,21 +60,22 @@
           </div>
 
         </div>
+
         <div class="row">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="col-md-2 nav-item active">
                   <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="col-md-2 nav-item">
                   <a class="nav-link" href="#">About Us</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="col-md-2 nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Services
                   </a>
@@ -85,7 +86,7 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="col-md-2 nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Products
                   </a>
@@ -96,10 +97,10 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
                 </li>
-                <li class="nav-item">
+                <li class="col-md-2 nav-item">
                   <a class="nav-link" href="#">Gallery</a>
                 </li>
-                <li class="nav-item">
+                <li class="col-md-2 nav-item">
                   <a class="nav-link disabled" href="#">Contact</a>
                 </li>
               </ul>
@@ -116,19 +117,21 @@
     <div class="col-md-10">
       <h2>35% Sale</h2>
       <h1>You enter summer with refreshing rates</h1>
-      <button type="button" class="btn btn-light">Explore It</button>
+      <button type="button" class="btn btn-light rounded-0">Explore It</button>
     </div>
     <div class="col-md-2">
       <img src="img/weather.png" alt="">
       <img src="img/gellery.png" alt="">
       <img src="img/virtual-tour.png" alt="">
     </div>
+    <div>
+      <i class="demo-icon icon-hospital"></i>
+      <h4>Hotel</h4>
+    </div>
   </div>
 
 
   <div class="row">
-    <i class="demo-icon icon-hospital"></i>
-    <h4>Hotel</h4>
 
       <div class="row">
         <div class="col-md-3">
@@ -143,7 +146,7 @@
           <input type="text" name="" value=""></input>
         </div>
 
-        <div class="form-group row">
+        <div class="form-group col-md-1">
          <label for="exampleFormControlSelect1">Room</label>
          <select class="form-control" id="exampleFormControlSelect1">
            <option>1</option>
@@ -154,9 +157,9 @@
          </select>
         </div>
 
-        <div class="form-group row">
+        <div class="form-group col-md-1">
          <label for="exampleFormControlSelect1">Person</label>
-         <select class="form-control" id="exampleFormControlSelect1">
+         <select class="form-control">
            <option>1</option>
            <option>2</option>
            <option>3</option>
@@ -165,15 +168,30 @@
          </select>
         </div>
 
-        <div class="form-group row">
+        <div class="form-group col-md-1">
          <label for="exampleFormControlSelect1">Child</label>
-         <select class="form-control" id="exampleFormControlSelect1">
+         <select class="form-control">
            <option>1</option>
            <option>2</option>
            <option>3</option>
            <option>4</option>
            <option>5</option>
          </select>
+        </div>
+
+        <div class="form-group col-md-1">
+         <label for="exampleFormControlSelect1">Day</label>
+         <select class="form-control">
+           <option>1</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+           <option>5</option>
+         </select>
+        </div>
+
+        <div class="col-md-2">
+          <button type="button" name="button">Search Book</button>
         </div>
 
       </div>
