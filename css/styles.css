@@ -1,13 +1,36 @@
+hr {
+  width: 90%;
+}
+
+article {
+  padding-left: 2%;
+}
+
+footer {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.aboutus-breadcrumb h2 {
+  margin-left: 100%;
+  width: 100%;
+}
+
+.breadcrumb a {
+  color: #C6D4D6;
+}
+
+.header-hr {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .card {
   text-align: center;
 }
 
 .gold-text {
   color: tan;
-}
-
-.grey-text {
-  color: #C6D4D6;
 }
 
 .logo-top {
@@ -50,7 +73,7 @@
 }
 
 .icon-search {
-  margin-right: 24%;
+  margin-right: 18%;
 }
 
 .explore-button {
@@ -62,13 +85,21 @@
   margin-top: 2%;
 }
 
+.jumbotron {
+  margin-left: 12%;
+}
+
+.widgets {
+  margin-left: -24%;
+}
+
 .icon-hospital {
   margin-right: 4%;
   margin-top: 3%;
 }
 
 .hotel-tab {
-  margin-left: 11%;
+  margin-left: 15%;
   width: 8%;
   padding-top: 1%;
   padding-left: 1%;
@@ -76,38 +107,135 @@
 }
 
 .booking {
-  margin-left: 11%;
+  width: 70%;
+  margin-left: 15%;
   margin-bottom: 3%;
   padding-left: 1%;
   padding-right: 1%;
   padding-top: 1%;
 }
 
+.search-book {
+  margin-top: 10%;
+}
+
 .first-page-cards {
   padding-top: 2%;
+  width: 80%;
+  margin-left: 11%;
 }
 
 .about-hotel {
   font-weight: lighter;
   margin-bottom: 2%;
+  margin-top: 3%;
 }
 
 .about-lorem {
-  margin-bottom: 4%;
+  margin-bottom: 5%;
+}
+
+.home-cards {
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 2%;
 }
 
 .border-cards {
   border: 8px solid black;
   width: 372px;
-margin-top: 6%;
-text-align: center;
-height: 212px;
+  margin-top: 6%;
+  text-align: center;
+  height: 212px;
+}
+
+.home-card-button {
+  margin-top: 15%;
+  font-style: italic;
+}
+
+.news-section {
+  border: 1px solid gray;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  padding-left: 1%;
+}
+
+.view-all-btn {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.announcements {
+  border: 1px solid gray;
+  width: 470px;
+  margin-top: 4%;
+  padding-left: 3%;
+}
+
+.products {
+  border: 1px solid gray;
+  width: 88%;
+  margin-left: 0%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-left: 2%;
+}
+
+.grey-text {
+  color: #C6D4D6;
+}
+
+.footer-links {
+  text-align: left;
+  font-size: 13px;
+  padding-left: 4%;
 }
 
 .logo-footer {
   padding-top: 6%;
+  padding-left: 5%;
+}
+
+.breadcrumb {
+  width: 35%;
+  float: right;
+}
+
+.aboutus-breadcrumb {
+  margin-top: 10%;
+}
+
+.aboutus-main {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.gold-aboutus {
+  color: #DEB25B;
+}
+
+.bold-p {
+  font-weight: bold;
+}
+
+footer p {
+  font-size: 13px;
+}
+
+.aboutus-main p {
+  color: gray;
 }
 
 .page-header h1 {
   text-transform: uppercase;
+}
+
+.border-cards p {
+  font-size: 12px;
+}
+
+.border-cards h5 {
+  margin-top: 9%;
 }
