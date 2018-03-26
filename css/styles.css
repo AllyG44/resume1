@@ -1,3 +1,113 @@
 .card {
   text-align: center;
 }
+
+.gold-text {
+  color: tan;
+}
+
+.grey-text {
+  color: #C6D4D6;
+}
+
+.logo-top {
+  padding-top: 2%;
+}
+
+.email-top {
+  margin-top: 2%;
+}
+
+.phone-top {
+  margin-top: 2%;
+}
+
+.login-button {
+  margin-left: 78%;
+  margin-top: 7%;
+}
+
+.language-button {
+  margin-left: 36%;
+  padding-left: 18%;
+  padding-right: 18%;
+  margin-top: 7%;
+}
+
+.social-networking {
+  padding: 0;
+  margin-top: 1%;
+  margin-right: 4%;
+}
+
+.social-link {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.top-directory {
+
+}
+
+.icon-search {
+  margin-right: 24%;
+}
+
+.explore-button {
+  padding: 1% 3%;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  margin-top: 2%;
+}
+
+.icon-hospital {
+  margin-right: 4%;
+  margin-top: 3%;
+}
+
+.hotel-tab {
+  margin-left: 11%;
+  width: 8%;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-bottom: 1%;
+}
+
+.booking {
+  margin-left: 11%;
+  margin-bottom: 3%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+}
+
+.first-page-cards {
+  padding-top: 2%;
+}
+
+.about-hotel {
+  font-weight: lighter;
+  margin-bottom: 2%;
+}
+
+.about-lorem {
+  margin-bottom: 4%;
+}
+
+.border-cards {
+  border: 8px solid black;
+  width: 372px;
+margin-top: 6%;
+text-align: center;
+height: 212px;
+}
+
+.logo-footer {
+  padding-top: 6%;
+}
+
+.page-header h1 {
+  text-transform: uppercase;
+}
