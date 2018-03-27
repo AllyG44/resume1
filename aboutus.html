@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/aboutus.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script defer src="css/fonts/fontawesome-all.js">
@@ -28,7 +28,7 @@
             </div>
 
             <div class="text-secondary col-md phone-top">
-              <i class="demo-icon icon-phone"></i>
+              <i class="demo-icon icon-phone-in-talk"></i>
               <link>+440 875369208</link>
             </div>
 
@@ -81,26 +81,24 @@
                       <a class="nav-link text-secondary top-directory" href="aboutus.html">About Us</a>
                     </li>
                     <li class="col-md-3 nav-item dropdown">
-                      <a class="nav-link dropdown-toggle text-secondary" href="services.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Services
-                        </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Complimentary Breakfast</a>
-                        <a class="dropdown-item" href="#">Free WiFi</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
+                      <a href="services.html">
+                        <select class="selectpicker bg-dark border-0 text-secondary">
+                          <option value="Services">Services</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                      </a>
                     </li>
                     <li class="col-md-3 nav-item dropdown">
-                      <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Products
-                        </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
+                      <a href="products.html">
+                        <select class="selectpicker bg-dark border-0 text-secondary">
+                          <option value="Products">Products</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                      </a>
                     </li>
                     <li class="col-md-1 nav-item">
                       <a class="nav-link text-secondary" href="#">Gallery</a>
@@ -159,10 +157,10 @@
           <div class="card border-0 bg-light">
             <div class="card-body">
               <img src="img/discover.png" alt="">
-              <h4 class="card-title gold-text">Discover</h4>
+              <h4 class="card-title">Discover</h4>
               <p class="card-text text-secondary">Nam tellus, conva augue. Aliquam lobortis mollis dapibus ullamcorper justo.</p>
               <div class="btn-group dropright">
-                <button type="button" class="gold-text btn btn-outline-light dropdown-toggle" data-toggle="dropdown">
+                <button type="button" class="text-secondary btn btn-outline-light dropdown-toggle" data-toggle="dropdown">
                   Read More
                 </button>
                 <div class="dropdown-menu">
@@ -281,9 +279,9 @@
       </div>
 
       <footer class="row bg-dark">
-        <div class="col-md-3">
+        <div class="col-md-3 nortabout">
           <h4 class="grey-text">NortSea About</h4>
-          <p class="grey-text">Lorem ipsum dolor sit amet, consectetur mollis ut odio. Praesent et posuere ex. Suspendisse bibendum orci nec imperdiet porttitor. Quisque blandit ipsum at erat vulputate posuere. Morbi id urna ultrices, accumsan tortor vitae, facilisis leo.</p>
+          <p class="grey-text">Lorem ipsum dolor sit amet, consectetur mollis ut odio. Vestibulum sit amet tristique libero, vitae accumsan dolor. Praesent et posuere ex. Suspendisse bibendum orci nec imperdiet porttitor. Quisque blandit ipsum at erat vulputate posuere. Morbi id urna ultrices, accumsan tortor vitae, facilisis leo.</p>
           <button type="button" class="text-secondary btn btn-dark dropdown-toggle border-bottom" data-toggle="dropdown">
             Read More
           </button>
@@ -315,6 +313,7 @@
               United States</p>
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="col">
               <p class="gold-text"><i class="demo-icon icon-phone"></i>Phone:</p>
@@ -323,6 +322,7 @@
               <p class="grey-text">+440 1233213208</p>
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="col">
               <p class="gold-text"><i class="demo-icon icon-paper-plane"></i>Email:</p>
@@ -331,6 +331,7 @@
               <p class="grey-text">support@nortsea.com</p>
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="col">
               <p class="gold-text"><i class="demo-icon icon-compass"></i>GPS:</p>

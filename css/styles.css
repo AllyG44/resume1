@@ -1,9 +1,14 @@
+select {
+  margin-top: 6%;
+}
+
 hr {
   width: 90%;
 }
 
 article {
-  padding-left: 2%;
+  width: 89%;
+  padding-left: 18%;
 }
 
 footer {
@@ -56,10 +61,6 @@ footer {
 .social-link {
   padding-left: 1%;
   padding-right: 1%;
-}
-
-.top-directory {
-
 }
 
 .icon-search {
@@ -126,15 +127,15 @@ footer {
 }
 
 .home-cards {
-  margin-left: 4%;
-  margin-right: 4%;
+  margin-left: 17%;
+  margin-right: 14%;
   margin-bottom: 2%;
 }
 
 .border-cards {
-  border: 8px solid black;
+  border: 15px solid black;
   width: 372px;
-  margin-top: 6%;
+  margin-top: 10%;
   text-align: center;
   height: 212px;
 }
@@ -148,7 +149,6 @@ footer {
   border: 1px solid gray;
   margin-top: 1.5%;
   margin-bottom: 1.5%;
-  padding-left: 1%;
 }
 
 .view-all-btn {
@@ -187,85 +187,20 @@ footer {
   padding-left: 5%;
 }
 
-.breadcrumb {
-  width: 35%;
-  float: right;
+.nortabout {
+  padding-right: 8%;
 }
 
-.aboutus-breadcrumb {
-  margin-top: 10%;
-}
-
-.aboutus-main {
-  text-align: center;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: 14%;
-  margin-top: 10%;
-}
-
-.gold-aboutus {
-  color: #DEB25B;
-}
-
-.bold-p {
-  font-weight: bold;
-}
-
-.john-doe {
-  width: 93%;
-  margin-left: 4%;
-}
-
-.founder {
-  font-size: 13px;
-  color: #E2E1E1;
-}
-
-.icon-picture-1 {
-  font-size: 275%;
-  color: gray;
-  background-color: #C6D4D6;
-  border-radius: 100%;
-  height: 160px;
-  width: 76%;
-  padding-top: 20%;
-  padding-right: 7%;
-  margin-left: 9%;
-  margin-bottom: 12%;
-}
-
-.second-page-cards {
-  padding-bottom: 4%;
+.calendar-dates {
+  padding-top: 4%;
 }
 
 footer p {
   font-size: 13px;
 }
 
-.aboutus-breadcrumb h2 {
-  margin-left: 100%;
-  width: 100%;
-}
-
-.breadcrumb a {
-  color: #C6D4D6;
-}
-
 .page-header h1 {
   text-transform: uppercase;
-}
-
-.aboutus-main h1 {
-  text-transform: uppercase;
-  font-family: "Open-Sans";
-  letter-spacing: 4px;
-}
-
-.aboutus-main p {
-  font-family: "Open-Sans";
-  color: #D0D0D0;
-  font-style: italic;
 }
 
 .border-cards p {

@@ -1,0 +1,149 @@
+select {
+  margin-top: 6%;
+}
+
+footer {
+  padding: 5% 10%;
+}
+
+.logo-top {
+  padding-top: 2%;
+}
+
+.email-top {
+  margin-top: 2%;
+}
+
+.phone-top {
+  margin-top: 2%;
+}
+
+.login-button {
+  margin-left: 78%;
+  margin-top: 7%;
+}
+
+.language-button {
+  margin-left: 36%;
+  padding-left: 18%;
+  padding-right: 18%;
+  margin-top: 7%;
+}
+
+.social-networking {
+  padding: 0;
+  margin-top: 1%;
+  margin-right: 4%;
+}
+
+.social-link {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.icon-search {
+  margin-right: 18%;
+}
+
+.gold-text {
+  color: tan;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  width: 35%;
+  float: right;
+}
+
+.services-breadcrumb {
+  margin-top: 6%;
+  width: 86%;
+  margin-left: 6%;
+}
+
+.gold-text {
+  color: tan;
+}
+
+.preferences {
+  text-align: center;
+  width: 42%;
+  margin-left: 27%;
+  margin-bottom: 5%;
+  margin-top: 8%;
+}
+
+.bold-p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.facilities {
+  width: 38%;
+  margin-left: 30%;
+  padding-bottom: 4%;
+}
+
+.nortabout {
+  padding-right: 8%;
+}
+
+.grey-text {
+  color: #C6D4D6;
+}
+
+.footer-links {
+  text-align: left;
+  font-size: 13px;
+  padding-left: 4%;
+}
+
+.logo-footer {
+  padding-top: 6%;
+  padding-left: 5%;
+}
+
+footer p {
+  font-size: 13px;
+}
+
+.services-breadcrumb h2 {
+  margin-left: 100%;
+  width: 100%;
+}
+
+.breadcrumb a {
+  color: #C6D4D6;
+}
+
+.preferences h1 {
+  color: #DEB25B;
+  text-transform: uppercase;
+  font-family: "Open-Sans";
+  letter-spacing: 4px;
+}
+
+.preferences p {
+  font-family: "Open-Sans";
+  color: #D0D0D0;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.facilities h2 {
+  color: #DEB25B;
+  font-family: "Open-Sans";
+  font-weight: bold;
+}
+
+.facilities i {
+  background-color: #CB5AF2;
+  color: white;
+  float: left;
+  margin-right: 5%;
+}
+
+.facilities p {
+  color: #D0D0D0;
+  font-size: 14px;
+}

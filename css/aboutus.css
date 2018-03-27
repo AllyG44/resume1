@@ -1,0 +1,176 @@
+select {
+  margin-top: 6%;
+}
+
+hr {
+  width: 90%;
+}
+
+article {
+  padding-left: 2%;
+}
+
+footer {
+  padding: 5% 10%;
+}
+
+.header-hr {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo-top {
+  padding-top: 2%;
+}
+
+.email-top {
+  margin-top: 2%;
+}
+
+.phone-top {
+  margin-top: 2%;
+}
+
+.login-button {
+  margin-left: 78%;
+  margin-top: 7%;
+}
+
+.language-button {
+  margin-left: 36%;
+  padding-left: 18%;
+  padding-right: 18%;
+  margin-top: 7%;
+}
+
+.social-networking {
+  padding: 0;
+  margin-top: 1%;
+  margin-right: 4%;
+}
+
+.social-link {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.icon-search {
+  margin-right: 18%;
+}
+
+.gold-text {
+  color: tan;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  width: 35%;
+  float: right;
+}
+
+.aboutus-breadcrumb {
+  margin-top: 6%;
+  width: 86%;
+  margin-left: 6%;
+}
+
+.aboutus-main {
+  text-align: center;
+  width: 42%;
+  margin-left: 26%;
+  margin-bottom: 12%;
+  margin-top: 8%;
+}
+
+.gold-aboutus {
+  color: #DEB25B;
+}
+
+.bold-p {
+  font-weight: bold;
+}
+
+.card {
+  text-align: center;
+}
+
+.first-page-cards {
+  padding-top: 2%;
+  width: 80%;
+  margin-left: 11%;
+}
+
+.john-doe {
+  width: 93%;
+  margin-left: 4%;
+}
+
+.founder {
+  font-size: 13px;
+  color: #CACACA;
+}
+
+.icon-picture-1 {
+  font-size: 275%;
+  color: gray;
+  background-color: #C6D4D6;
+  border-radius: 100%;
+  height: 160px;
+  width: 52%;
+  padding-top: 13%;
+  padding-right: 4%;
+  margin-left: 23%;
+  margin-bottom: 12%;
+}
+
+.second-page-cards {
+  padding-bottom: 4%;
+}
+
+.nortabout {
+  padding-right: 8%;
+}
+
+.grey-text {
+  color: #C6D4D6;
+}
+
+.footer-links {
+  text-align: left;
+  font-size: 13px;
+  padding-left: 4%;
+}
+
+.logo-footer {
+  padding-top: 6%;
+  padding-left: 5%;
+}
+
+footer p {
+  font-size: 13px;
+}
+
+.aboutus-breadcrumb h2 {
+  margin-left: 100%;
+  width: 100%;
+}
+
+.breadcrumb a {
+  color: #C6D4D6;
+}
+
+.page-header h1 {
+  text-transform: uppercase;
+}
+
+.aboutus-main h1 {
+  text-transform: uppercase;
+  font-family: "Open-Sans";
+  letter-spacing: 4px;
+}
+
+.aboutus-main p {
+  font-family: "Open-Sans";
+  color: #D0D0D0;
+  font-style: italic;
+}
