@@ -15,6 +15,10 @@ footer {
   padding: 5% 10%;
 }
 
+.toptop {
+  margin-left: 20%;
+}
+
 .header-hr {
   width: 100%;
   margin: 0 auto;
@@ -34,37 +38,28 @@ footer {
 
 .email-top {
   margin-top: 2%;
+  margin-right: -7%;
 }
 
 .phone-top {
   margin-top: 2%;
+  margin-right: -4%;
 }
 
 .login-button {
-  margin-left: 78%;
-  margin-top: 7%;
+  margin-right: -13%;
+  margin-top: 2%;
 }
 
 .language-button {
-  margin-left: 36%;
-  padding-left: 18%;
-  padding-right: 18%;
-  margin-top: 7%;
+  margin-top: 2%;
+  margin-right: -11%
 }
 
 .social-networking {
   padding: 0;
-  margin-top: 1%;
-  margin-right: 4%;
-}
-
-.social-link {
-  padding-left: 1%;
-  padding-right: 1%;
-}
-
-.icon-search {
-  margin-right: 18%;
+  margin-top: 2%;
+  margin-right: -3%;
 }
 
 .explore-button {
@@ -197,6 +192,11 @@ footer {
 
 footer p {
   font-size: 13px;
+}
+
+.language-button button {
+  padding-left: 14%;
+  padding-right: 14%;
 }
 
 .page-header h1 {
