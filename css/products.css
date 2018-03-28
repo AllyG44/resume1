@@ -1,0 +1,164 @@
+select {
+  margin-top: 6%;
+}
+
+footer {
+  padding: 5% 10%;
+}
+
+.logo-top {
+  padding-top: 2%;
+}
+
+.email-top {
+  margin-top: 2%;
+}
+
+.phone-top {
+  margin-top: 2%;
+}
+
+.login-button {
+  margin-left: 78%;
+  margin-top: 7%;
+}
+
+.language-button {
+  margin-left: 36%;
+  padding-left: 18%;
+  padding-right: 18%;
+  margin-top: 7%;
+}
+
+.social-networking {
+  padding: 0;
+  margin-top: 1%;
+  margin-right: 4%;
+}
+
+.social-link {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.icon-search {
+  margin-right: 18%;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  width: 35%;
+  float: right;
+}
+
+.products-breadcrumb {
+  margin-top: 5%;
+  width: 92%;
+  margin-left: 6%;
+}
+
+.products-pic {
+  font-size: 60px;
+  color: gray;
+  margin-top: 6%;
+  padding-bottom: 11%;
+}
+
+.btn {
+  color: grey;
+  border-radius: 0;
+  border-color: lightgrey;
+}
+
+.lorem-btns {
+  width: 27%;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+.gold-all-btn {
+  color: tan;
+  border: 1px solid tan;
+  border-bottom: 2px solid tan;
+  padding: 8% 34%;
+}
+
+.arrow {
+  height: 35px;
+  color: grey;
+}
+
+.icon-left-open {
+  margin-left: 255%;
+  margin-top: -5%;
+  padding-top: 1%;
+  border: 1px solid lightgrey;
+}
+
+.icon-right-open {
+  margin-left: 269%;
+  margin-top: -7%;
+  padding-top: 1%;
+  border: 1px solid lightgrey;
+}
+
+.products-gallery {
+  font-size: 50px;
+  color: grey;
+  padding-left: 10%;
+  padding-top: 2%;
+}
+
+.products-body {
+  padding-bottom: 4%;
+}
+
+.grey-text {
+  color: #C6D4D6;
+}
+
+.gold-text {
+  color: tan;
+}
+
+.footer-links {
+  text-align: left;
+  font-size: 13px;
+  padding-left: 4%;
+}
+
+.logo-footer {
+  padding-top: 6%;
+  padding-left: 5%;
+}
+
+.nortabout {
+  padding-right: 8%;
+}
+
+footer p {
+  font-size: 13px;
+}
+
+.bunchaphotos h1 {
+  margin-left: 11%;
+}
+
+.products-breadcrumb h2 {
+  margin-left: 100%;
+  width: 100%;
+  color: tan;
+}
+
+.breadcrumb a {
+  color: #C6D4D6;
+}
+
+.products-gallery .icon-picture-1 {
+  background-color: #C6D4D6;
+  margin-left: 2%;
+  width: 14%;
+  padding-right: 1%;
+  height: 230px;
+  padding-top: 4.5%;
+}
