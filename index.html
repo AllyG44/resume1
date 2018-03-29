@@ -76,13 +76,13 @@
 
               <div class="collapse navbar-collapse">
                 <ul class="navbar-nav row">
-                  <li class="col-md-1 nav-item active">
+                  <li class="col-md-2 nav-item active">
                     <a class="nav-link text-secondary top-directory" href="#">Home<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="col-md-3 nav-item">
                     <a class="nav-link text-secondary top-directory" href="aboutus.html">About Us</a>
                   </li>
-                  <li class="col-md-3 nav-item dropdown">
+                  <li class="col-md-2 nav-item dropdown">
                     <a href="services.html">
                       <select class="selectpicker bg-dark border-0 text-secondary">
                         <option value="Services">Services</option>
@@ -92,7 +92,7 @@
                       </select>
                     </a>
                   </li>
-                  <li class="col-md-3 nav-item dropdown">
+                  <li class="col-md-2 nav-item dropdown">
                     <a href="products.html">
                       <select class="selectpicker bg-dark border-0 text-secondary">
                         <option value="Products">Products</option>
@@ -102,8 +102,8 @@
                       </select>
                     </a>
                   </li>
-                  <li class="col-md-1 nav-item">
-                    <a class="nav-link text-secondary" href="#">Gallery</a>
+                  <li class="col-md-2 nav-item">
+                    <a class="nav-link text-secondary" href="gallery.html">Gallery</a>
                   </li>
                   <li class="col-md-1 nav-item">
                     <a class="nav-link text-secondary" href="#">Contact</a>
@@ -171,106 +171,110 @@
               </div>
 
             </div><!-- End Carousel -->
-
+            <div class="col-md-2 widgets">
+              <img src="img/weather.png" alt="">
+              <img src="img/gellery.png" alt="">
+              <img src="img/virtual-tour.png" alt="">
+            </div>
           </section>
 
         </div>
       </div>
 
 
-      <div class="col-md-2 widgets">
-        <img src="img/weather.png" alt="">
-        <img src="img/gellery.png" alt="">
-        <img src="img/virtual-tour.png" alt="">
-      </div>
-      <div class="bg-light hotel-tab">
-        <i class="demo-icon float-left icon-hospital"></i>
-        <h4>Hotel</h4>
-      </div>
-      <div class="w-100">
 
-      </div>
-      <div class="row bg-light booking">
 
-        <div class="container col-md-3">
-          <div class="row">
-            <div>
-              <h6>Arrival</h6>
-              <div class="form-group">
-                <div class='input-group date'>
-                  <input type='text' class="form-control" placeholder="16.07.15" />
-                  <span class="input-group-addon">
-                    <i class="demo-icon icon-calendar"></i>
-                  </span>
+      <div class="container">
+        <div class="bg-light hotel-tab">
+          <i class="demo-icon float-left icon-hospital"></i>
+          <h4>Hotel</h4>
+        </div>
+        <div class="w-100">
+
+        </div>
+        <div class="row bg-light booking">
+
+          <div class="container col-md-3">
+            <div class="row">
+              <div>
+                <h6>Arrival</h6>
+                <div class="form-group">
+                  <div class='input-group date'>
+                    <input type='text' class="form-control" placeholder="16.07.15" />
+                    <span class="input-group-addon">
+                      <i class="demo-icon icon-calendar"></i>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="container col-md-3">
-          <div class="row">
-            <div>
-              <h6>Going</h6>
-              <div class="form-group">
-                <div class='input-group date'>
-                  <input type='text' class="form-control" placeholder="28.07.15" />
-                  <span class="input-group-addon">
-                    <i class="demo-icon icon-calendar"></i>
-                  </span>
+          <div class="container col-md-3">
+            <div class="row">
+              <div>
+                <h6>Going</h6>
+                <div class="form-group">
+                  <div class='input-group date'>
+                    <input type='text' class="form-control" placeholder="28.07.15" />
+                    <span class="input-group-addon">
+                      <i class="demo-icon icon-calendar"></i>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="form-group col-md-1">
+            <label>Room</label>
+            <select class="form-control">
+                 <option>1</option>
+                 <option>2</option>
+                 <option>3</option>
+                 <option>4</option>
+                 <option>5</option>
+               </select>
+          </div>
+
+          <div class="form-group col-md-1">
+            <label>Person</label>
+            <select class="form-control">
+                 <option>1</option>
+                 <option>2</option>
+                 <option>3</option>
+                 <option>4</option>
+                 <option>5</option>
+               </select>
+          </div>
+
+          <div class="form-group col-md-1">
+            <label for="exampleFormControlSelect1">Child</label>
+            <select class="form-control">
+                 <option>1</option>
+                 <option>2</option>
+                 <option>3</option>
+                 <option>4</option>
+                 <option>5</option>
+               </select>
+          </div>
+
+          <div class="form-group col-md-1">
+            <label for="exampleFormControlSelect1">Day</label>
+            <select class="form-control">
+                 <option>1</option>
+                 <option>2</option>
+                 <option>3</option>
+                 <option>4</option>
+                 <option>5</option>
+               </select>
+          </div>
+
+          <div class="col-md-2">
+            <button type="button" class="btn btn-secondary btn-lg search-book" name="button">Search Book</button>
+          </div>
         </div>
 
-        <div class="form-group col-md-1">
-          <label>Room</label>
-          <select class="form-control">
-               <option>1</option>
-               <option>2</option>
-               <option>3</option>
-               <option>4</option>
-               <option>5</option>
-             </select>
-        </div>
-
-        <div class="form-group col-md-1">
-          <label>Person</label>
-          <select class="form-control">
-               <option>1</option>
-               <option>2</option>
-               <option>3</option>
-               <option>4</option>
-               <option>5</option>
-             </select>
-        </div>
-
-        <div class="form-group col-md-1">
-          <label for="exampleFormControlSelect1">Child</label>
-          <select class="form-control">
-               <option>1</option>
-               <option>2</option>
-               <option>3</option>
-               <option>4</option>
-               <option>5</option>
-             </select>
-        </div>
-
-        <div class="form-group col-md-1">
-          <label for="exampleFormControlSelect1">Day</label>
-          <select class="form-control">
-               <option>1</option>
-               <option>2</option>
-               <option>3</option>
-               <option>4</option>
-               <option>5</option>
-             </select>
-        </div>
-
-        <div class="col-md-2">
-          <button type="button" class="btn btn-secondary btn-lg search-book" name="button">Search Book</button>
-        </div>
       </div>
 
     </div>
