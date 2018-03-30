@@ -246,7 +246,7 @@ footer p {
     padding-bottom: 8%;
   }
 
-  .email-top, .phone-top, .login-button,
+  .email-top, .phone-top, .login-button, .disappear,
   .language-button, .social-networking, .widgets, hr, .carousel img {
     visibility: hidden;
   }
@@ -269,6 +269,8 @@ footer p {
   .hotel-tab {
     width: 106px;
     margin-top: 38%;
+    background-color: white;
+    color: #757575;
   }
 
   .first-page-cards {
@@ -300,6 +302,48 @@ footer p {
   .search-book {
     width: 82%;
     margin-left: -12%;
+  }
+
+  .first-page-cards {
+    margin-top: 158%;
+    border-top: 2px solid tan;
+    border-width: 100%;
+  }
+
+  .about-hotel-p {
+    width: 65%;
+    margin-left: 20%;
+  }
+
+  .about-hotel {
+    margin-bottom: 8%;
+  }
+
+  .home-cards {
+    margin-left: 7%;
+  }
+
+  .news-section {
+    height: 388px
+  }
+
+  .pacman {
+    margin-top: -14%;
+  }
+
+  .calendar-dates {
+    width: 256px;
+    margin-left: 8%;
+  }
+
+  .news-section h5, .news-section p {
+    width: 254px;
+    margin-left: 10%;
+    margin-top: 2%;
+  }
+
+  .view-all-btn {
+    margin-top: -370%;
   }
 
 
