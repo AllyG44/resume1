@@ -93,6 +93,7 @@ footer {
 }
 
 .hotel-tab {
+  background-color: white;
   width: 11%;
   margin-left: 5%;
   padding-top: 1%;
@@ -101,6 +102,7 @@ footer {
 }
 
 .booking {
+  background-color: white;
   margin-left: 5%;
   margin-bottom: 3%;
   padding-left: 1%;
@@ -172,6 +174,14 @@ footer {
   margin-top: 4%;
   margin-bottom: 4%;
   padding-left: 2%;
+}
+
+.shown-text {
+  visibility: hidden;
+}
+
+.products p {
+  width: 50%;
 }
 
 .grey-text {
@@ -246,8 +256,8 @@ footer p {
     padding-bottom: 8%;
   }
 
-  .email-top, .phone-top, .login-button, .disappear,
-  .language-button, .social-networking, .widgets, hr, .carousel img {
+  .hidden-text, .email-top, .phone-top, .login-button, .disappear,
+  .language-button, .social-networking, .widgets, .carousel img {
     visibility: hidden;
   }
 
@@ -324,16 +334,17 @@ footer p {
   }
 
   .news-section {
-    height: 388px
+    height: 408px
   }
 
   .pacman {
-    margin-top: -14%;
+    margin-top: -13%;
   }
 
   .calendar-dates {
     width: 256px;
-    margin-left: 8%;
+    margin-left: 3%;
+    margin-top: 12%;
   }
 
   .news-section h5, .news-section p {
@@ -343,7 +354,48 @@ footer p {
   }
 
   .view-all-btn {
-    margin-top: -370%;
+    margin-top: -434%;
+  }
+
+  .announcements {
+    width: 313px;
+    height: 545px;
+    margin-left: -11%;
+    margin-top: 14%;
+  }
+
+  .announcements p {
+    margin-bottom: 8%;
+    margin-top: -6%;
+  }
+
+  .announcements h5 {
+    margin-bottom: 0;
+  }
+
+  .view-all-btn-2 {
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+
+  .products {
+    width: 298px;
+    height: 368px;
+    margin-left: -8%;
+    margin-top: 14%;
+    margin-bottom: 14%;
+  }
+
+  .products p {
+    width: 267px;
+  }
+
+  .shown-text {
+    visibility: visible;
+  }
+
+  .nortabout {
+    width: 300px;
   }
 
 
