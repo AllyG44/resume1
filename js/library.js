@@ -1,11 +1,32 @@
-  //Libary construct
-  var Library = function(instanceKey){
+(function() {
+  var libInstance;
+
+  window.Library = function(instanceKey) {
+    if (libInstance) {
+      return libInstance;
+    }
+    libInstance = this;
     this.booksArray = new Array();
     this.libraryKey = instanceKey;
   };
+})();
 
-  //Lib Instance
-  var gLib = new Library("gLib1");
+Library.prototype.init = function () {
+  this.$btn = $("button");
+  this._bindEvents();
+
+  return false;
+};
+
+Library.prototype._bindEvents = function () {
+
+};
+
+Library.prototype.handleClick = function () {
+  alert("fired!");
+
+  return false;
+};
 
   //Book obj
   var Book = function(args){
@@ -52,11 +73,7 @@
   };
 
   Library.prototype.getRandomBook = function() {
-      if (this.booksArray.length) {
-        return this.booksArray[Math.floor(Math.random() * this.booksArray.length)];
-      } else {
-          return null;
-      }
+    return this.booksArray.length ? this.booksArray[Math.floor(Math.random() * this.booksArray.length)] : null;
   };
 
   Library.prototype.getBookByTitle = function(title) {
@@ -129,6 +146,21 @@
   Library.prototype.getObject = function(instanceKey) {
     return this.booksArray = JSON.parse(localStorage.getItem(instanceKey));
   };
+
+
+$(function() {
+  $("button").on("click", function(){
+  alert(textValue.value);
+});
+
+$(".searchButton").on("click", function(){
+  
+});
+});
+
+//Lib Instance
+window.gLib = new Library("allyLib");
+
   //Book Instances
   var gBook1 = new Book({title: "IT", auth: "Stephen King", numPages: 800, pubDate: "December 17, 1986"});
   var gBook2 = new Book({title: "The Shining", auth: "Stephen King", numPages: 424, pubDate: "April 9, 1977"});
@@ -138,7 +170,7 @@
   var gBook6 = new Book({title: "Through the Looking-Glass", auth: "Lewis Carroll", numPages: 424, pubDate: "January 27, 1871"});
   var gBook7 = new Book({title: "Jabberwocky", auth: "Lewis Carroll", numPages: 390, pubDate: "March 10, 1871"});
   var gBook8 = new Book({title: "Catcher In The Rye", auth: "JD Salinger", numPages: 200, pubDate: "December 25, 1987"});
-  var gBook9 = new Book({title: "Nine Stories", auth: "JD Salinger", numPages: 320, pubDate: "June 22, 1953"});
+  var gBook9 = new Book({title: "Franny and Zooey", auth: "JD Salinger", numPages: 320, pubDate: "June 22, 1953"});
   var gBook10 = new Book({title: "Teddy", auth: "JD Salinger", numPages: 250, pubDate: "September 21, 1953"});
 
   var bookLib = [gBook1, gBook2, gBook3, gBook4, gBook5, gBook6, gBook7, gBook8, gBook9, gBook10];
