@@ -4,11 +4,6 @@ body {
   background-repeat: no-repeat;
 }
 
-img {
-  padding: 1%;
-  margin-right: 2%;
-}
-
 h1 {
   border: 4px dotted black;
   width: 12%;
@@ -17,56 +12,15 @@ h1 {
   margin-bottom: 3%;
 }
 
-.searchBox {
-  margin-top: 5%;
-  margin-left: 16%;
+nav {
+  width: 80%;
+  margin-left: 8%;
 }
 
-.input {
-  height: 3rem;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 2%;
-}
-
-.book-table {
-  margin-top: 10%;
-}
-
-
-.wonderland {
-  width: 8%;
-}
-
-.looking-glass {
-  width: 8.4%;
-}
-
-.jabberwocky {
-  width: 9.4%;
-}
-
-.shining {
-  width: 7.5%;
-}
-
-.it-book {
-  width: 8%;
-}
-
-.second-row {
-  width: 8%;
-  margin-right: 2.4%;
-  margin-top: 5%;
+img {
+  max-width: 30%;
 }
 
 @media (max-width: 1500px) {
-  .book-table {
-    margin: 0;
-    width: 70%;
-  }
 
-  .book-table tr {
-      margin-right: 1%;
-    }
 };
