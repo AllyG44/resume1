@@ -44,13 +44,13 @@ Library.prototype._myTable = function(args){
 // titleCell.innerHTML = title;
 //
 // var authorCell   = newRow.insertCell();
-// authorCell.innerHTML = auth;
+// authorCell.innerHTML = author;
 //
-// var numPagesCell   = newRow.insertCell();
-// numPagesCell.innerHTML = numPages;
+// var numberOfPagesCell   = newRow.insertCell();
+// numberOfPagesCell.innerHTML = numberOfPages;
 //
 // var dateCell   = newRow.insertCell();
-// dateCell.innerHTML = pubDate;
+// dateCell.innerHTML = publishDate;
 
 // Library.prototype._buildTable = function(args) {
 //
@@ -70,29 +70,29 @@ Library.prototype._myTable = function(args){
 //   titleCell.innerHTML = title;
 //
 //   var authorCell = newRow.insertCell();
-//   authorCell.innerHTML = auth;
+//   authorCell.innerHTML = author;
 //
 //   var numberOfPagesCell = newRow.insertCell();
-//   numberOfPagesCell.innerHTML = numPages;
+//   numberOfPagesCell.innerHTML = numberOfPages;
 //
 //   var publishDateCell = newRow.insertCell();
-//   publishDateCell.innerHTML = pubDate;
+//   publishDateCell.innerHTML = publishDate;
 //
 //   var trashcanCell = newRow.insertCell();
 //   trashcanCell.innerHTML = "<button class='btn btn-info deleteBook'>X</button>";
 
 Library.prototype._booksFromArray = function() {
-  var cover, title, author, pages, date;
+  var cover, title, author, numberOfPages, date;
 
   for (var i = 0; i < this.booksArray.length; i++) {
     cover = this.booksArray[i].cover;
     title = this.booksArray[i].title;
     author = this.booksArray[i].author;
-    pages = this.booksArray[i].numberOfPages;
+    numberOfPages = this.booksArray[i].numberOfPages;
     date = this.booksArray[i].publishDate;
-    $('#tableBody').append("<tr><td><img src="+cover+"></td><td>"+title+"</td><td>"+author+"</td><td>"+pages+"</td><td>"+date+"</td></tr>");
+    $('#tableBody').append("<tr><td><img src="+cover+"></td><td>"+title+"</td><td>"+author+"</td><td>"+numberOfPages+"</td><td>"+date+"</td></tr>");
   }
-}
+};
 
 Library.prototype._handleAddOneBook = function(args) {
   var singleBook = new Book(args);
@@ -100,7 +100,7 @@ Library.prototype._handleAddOneBook = function(args) {
   singleBook.cover = $("#coverImg").val();
   singleBook.title = $("#titleInput").val();
   singleBook.author = $("#authorInput").val();
-  singleBook.pages = $("#pagesInput").val();
+  singleBook.numberOfPages = $("#pagesInput").val();
   singleBook.publishDate = $("#dateInput").val();
 
   if (!singleBook.title || !singleBook.author) {
@@ -108,7 +108,7 @@ Library.prototype._handleAddOneBook = function(args) {
   }
 
   if (this.addBook(singleBook)) {
-    $('#tableBody').append("<tr><td><img src="+singleBook.cover+"></td><td>"+singleBook.title+"</td><td>"+singleBook.author+"</td><td>"+singleBook.pages+"</td><td>"+singleBook.date+"</td></tr>");
+    $('#tableBody').append("<tr><td><img src="+singleBook.cover+"></td><td>"+singleBook.title+"</td><td>"+singleBook.author+"</td><td>"+singleBook.numberOfPages+"</td><td>"+singleBook.publishDate+"</td></tr>");
     this.setObject(this.libraryKey);
     return true;
   }
@@ -123,9 +123,9 @@ Library.prototype._handleSearch = function() {
   var Book = function(args){
     this.cover = args.cover;
     this.title = args.title;
-    this.author = args.auth;
-    this.numberOfPages = args.numPages;
-    this.publishDate = new Date(args.pubDate);
+    this.author = args.author;
+    this.numberOfPages = args.numberOfPages;
+    this.publishDate = new Date(args.publishDate);
   };
 
   Library.prototype.addBook = function(book) {
@@ -153,10 +153,10 @@ Library.prototype._handleSearch = function() {
     return false;
   };
 
-  Library.prototype.removeBooksByAuthor = function(auth) {
+  Library.prototype.removeBooksByAuthor = function(author) {
     var results = false;
     for (var i = this.booksArray.length - 1; i >= 0; i--) {
-      if (this.booksArray[i].author === auth) {
+      if (this.booksArray[i].author === author) {
         this.booksArray.splice(i, 1);
         results = true;
       }
@@ -179,9 +179,9 @@ Library.prototype._handleSearch = function() {
     return tempArray;
   };
 
-  Library.prototype.getBooksByAuthor = function(auth) {
+  Library.prototype.getBooksByAuthor = function(author) {
     var tempArray = [];
-    var pattern = new RegExp(auth, "i");
+    var pattern = new RegExp(author, "i");
     for (var i = 0; i < this.booksArray.length; i++) {
       if (pattern.test(this.booksArray[i].author)) {
         tempArray.push(this.booksArray[i]);
@@ -250,15 +250,15 @@ Library.prototype._handleSearch = function() {
   });
 
   //Book Instances
-  window.gBook1 = new Book({cover: "css/IT.jpg", title: "IT", auth: "Stephen King", numPages: 800, pubDate: "December 17, 1986"});
-  window.gBook2 = new Book({cover: "css/Shining.jpg", title: "The Shining", auth: "Stephen King", numPages: 424, pubDate: "April 9, 1977"});
-  window.gBook3 = new Book({cover: "css/nineteenEightyFour.jpg", title: "1984", auth: "George Orwell", numPages: 674, pubDate: "June 8, 1949"});
-  window.gBook4 = new Book({cover: "css/animalFarm.jpg", title: "Animal Farm", auth: "George Orwell", numPages: 444, pubDate: "August 17, 1945"});
-  window.gBook5 = new Book({cover: "css/wonderland.jpg", title: "Alice's Adventures in Wonderland", auth: "Lewis Carroll", numPages: 400, pubDate: "November 26, 1865"});
-  window.gBook6 = new Book({cover: "css/looking-glass.jpg", title: "Through the Looking-Glass", auth: "Lewis Carroll", numPages: 424, pubDate: "January 27, 1871"});
-  window.gBook7 = new Book({cover: "css/jabberwocky.jpg", title: "Jabberwocky", auth: "Lewis Carroll", numPages: 390, pubDate: "March 10, 1871"});
-  window.gBook8 = new Book({cover: "css/catcherRye.jpg", title: "Catcher In The Rye", auth: "JD Salinger", numPages: 200, pubDate: "December 25, 1987"});
-  window.gBook9 = new Book({cover: "css/frannyAndZooey.jpg", title: "Franny and Zooey", auth: "JD Salinger", numPages: 320, pubDate: "June 22, 1953"});
-  window.gBook10 = new Book({cover: "css/teddy.jpg", title: "Teddy", auth: "JD Salinger", numPages: 250, pubDate: "September 21, 1953"});
+  window.gBook1 = new Book({cover: "css/IT.jpg", title: "IT", author: "Stephen King", numberOfPages: 800, publishDate: "December 17, 1986"});
+  window.gBook2 = new Book({cover: "css/Shining.jpg", title: "The Shining", author: "Stephen King", numberOfPages: 424, publishDate: "April 9, 1977"});
+  window.gBook3 = new Book({cover: "css/nineteenEightyFour.jpg", title: "1984", author: "George Orwell", numberOfPages: 674, publishDate: "June 8, 1949"});
+  window.gBook4 = new Book({cover: "css/animalFarm.jpg", title: "Animal Farm", author: "George Orwell", numberOfPages: 444, publishDate: "August 17, 1945"});
+  window.gBook5 = new Book({cover: "css/wonderland.jpg", title: "Alice's Adventures in Wonderland", author: "Lewis Carroll", numberOfPages: 400, publishDate: "November 26, 1865"});
+  window.gBook6 = new Book({cover: "css/looking-glass.jpg", title: "Through the Looking-Glass", author: "Lewis Carroll", numberOfPages: 424, publishDate: "January 27, 1871"});
+  window.gBook7 = new Book({cover: "css/jabberwocky.jpg", title: "Jabberwocky", author: "Lewis Carroll", numberOfPages: 390, publishDate: "March 10, 1871"});
+  window.gBook8 = new Book({cover: "css/catcherRye.jpg", title: "Catcher In The Rye", author: "JD Salinger", numberOfPages: 200, publishDate: "December 25, 1987"});
+  window.gBook9 = new Book({cover: "css/frannyAndZooey.jpg", title: "Franny and Zooey", author: "JD Salinger", numberOfPages: 320, publishDate: "June 22, 1953"});
+  window.gBook10 = new Book({cover: "css/teddy.jpg", title: "Teddy", author: "JD Salinger", numberOfPages: 250, publishDate: "September 21, 1953"});
 
   window.bookLib = [gBook1, gBook2, gBook3, gBook4, gBook5, gBook6, gBook7, gBook8, gBook9, gBook10];
