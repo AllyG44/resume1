@@ -21,17 +21,31 @@ img {
   max-width: 30%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .delete-button {
   background: url(delete.svg);
   height: 25px;
   width: 25px;
   background-repeat: no-repeat;
+  border: none;
+  float: right;
 }
 
 .delete-button:hover {
   background-color: red;
   background: url(delete-hover.svg);
   cursor: pointer;
+}
+
+.remove-author-card {
+  border: none;
+}
+
+.remove-author-card li {
+  border-bottom: 1px dotted black;
 }
 
 @media (max-width: 1500px) {

@@ -16,28 +16,28 @@ Library.prototype.init = function () {
   this._booksFromArray();
   // this._handleRemoveBooksByAuthor();
   // this.$sortShtuff = $("#sorter");
-  this.$addBtn = $("#myModal");
-  this.$addNotherBtn = $("#addNotherBook");
-  this.$deleteBtn = $("#delete-by-title-btn");
-  this.$searchBtn = $("button.searchLibrary");
+  this.$addBtn = $(".addBookModal");
+  this.$addNotherBtn = $(".addNotherBook");
+  this.$deleteBtn = $(".delete-button");
+  this.$searchBtn = $("#searchBooksButton");
   this.$getAuthors = $("#getAuthorBtn");
-  // this.$deleteAuthorsBtn = $("#author-delete");
+  // this.$secondFormTemplate = $(".secondForm form").clone();
+  this.$deleteAuthorsBtn = $("#author-delete");
   this._bindEvents();
-
 };
 
 Library.prototype._bindEvents = function() {
   this.$addBtn.on("click", $.proxy(this._handleAddOneBook, this));
   this.$addNotherBtn.on("click", $.proxy(this._handleAddNotherBook));
-  this.$deleteBtn.on("click", $.proxy(this._handleRemove, this));
+  this.$deleteBtn.on("click", $.proxy(this._handleRemoveByTitle, this));
   this.$searchBtn.on("click", $.proxy(this._handleSearch, this));
   this.$getAuthors.on("click", $.proxy(this._handleGetAuthors, this));
-  // this.$removeByAuthor.on("click", $.proxy(this._handleRemoveBooksByAuthor))
-    $("#author-delete").on("click", $.proxy(this._handleRemoveBooksByAuthor, this))
+  this.$deleteAuthorsBtn.on("click", $.proxy(this._handleRemoveBooksByAuthor))
+  // $("#author-delete").on("click", $.proxy(this._handleRemoveBooksByAuthor, this))
 };
 
 Library.prototype._booksFromArray = function() {
-  var deleteBtn = `<button id="delete-by-title-btn" class="delete-button"></button>`
+  var deleteBtn = `<button class="delete-button"></button>`
 
   for (var i = 0; i < this.booksArray.length; i++) {
     cover = this.booksArray[i].cover;
@@ -45,7 +45,7 @@ Library.prototype._booksFromArray = function() {
     author = this.booksArray[i].author;
     numberOfPages = this.booksArray[i].numberOfPages;
     date = this.booksArray[i].publishDate;
-    $('#tableBody').append(`<tr><td><img src="${cover}"></td><td>${title}</td><td>${author}</td><td>${numberOfPages}</td><td>${date}</td><td>${deleteBtn}</td></tr>`);
+    $('.tableBody').append(`<tr><td><img src="${cover}"></td><td>${title}</td><td>${author}</td><td>${numberOfPages}</td><td>${date}</td><td>${deleteBtn}</td></tr>`);
   }
 };
 
@@ -55,73 +55,86 @@ Library.prototype._clearBookInputs = function() {
   $("#authorInput").val("");
   $("#pagesInput").val("");
   $("#dateInput").val("");
+  $("#searchInput").val("");
   }
 
 Library.prototype._handleAddOneBook = function(args) {
   var singleBook = new Book(args);
+  var deleteBtn = `<button class="delete-button"></button>`
 
-  singleBook.deleteBtn = $(".delete-button");
   singleBook.cover = $("#coverImg").val();
   singleBook.title = $("#titleInput").val();
   singleBook.author = $("#authorInput").val();
   singleBook.numberOfPages = $("#pagesInput").val();
   singleBook.publishDate = $("#dateInput").val();
+  singleBook.deleteBtn = $(".delete-button");
 
   if (!singleBook.title || !singleBook.author) {
-    return alert("Fields required!");
+    alert("fields required!");
+    return false;
   }
 
   if (this.addBook(singleBook)) {
     this._booksFromArray(singleBook);
 
     // $('#tableBody').append("<tr><td><img src="+singleBook.cover+"></td><td>"+singleBook.title+"</td><td>"+singleBook.author+"</td><td>"+singleBook.numberOfPages+"</td><td>"+singleBook.publishDate+"</td><td><img src="+deleteImg+" id="+deleteBtn+"></td></tr>");
-    this.setObject(this.libraryKey);
-    this._clearBookInputs();
-    return true;
   }
+  this.setObject(this.libraryKey);
+  this._clearBookInputs();
+  return true;
 };
 
-// Library.prototype._handleAddNotherBook = function() {
-//   for (var i = 0; i < 4; i++) {
-//     }
+Library.prototype._handleAddNotherBook = function() {
+  this._handleAddOneBook();
+
+};
 
 
 Library.prototype._handleGetAuthors = function() {
   this._displayAuthors(this.getAuthors());
   console.log()
-}
-Library.prototype._handleSearch = function() {
+};
 
-  return false;
+Library.prototype._handleSearch = function() {
+  event.preventDefault();
+  var searchResults = $("#searchInput").val();
+  var arrayResults = this.searchLib(searchResults);
+  this._booksFromArray(arrayResults);
 };
 
 Library.prototype._displayAuthors = function(authors) {
+    this.init();
   for (var i in authors) {
-    $("div#listOfAuthors").append(`
-      <div class="card" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
-          <li>${authors[i]}</li><button id="author-delete" class="delete-button"></button>
+    $("div.listOfAuthors").append(`
+      <div class="card remove-author-card">
+        <ul class="list-group list-group-flush author-list">
+          <li class="remove-author-li">${authors[i]}<button class="delete-button author-delete"></button></li>
         </ul>
       </div>
     `);
-
   }
-}
-
-
-Library.prototype._handleRemoveBooksByAuthor = function() {
-    // var deletedAuthors = $(this).prev().text();
-    console.log(this)
-  $("#author-delete").on("click", function(){
-    // console.log($(this).prev().text());
-    this.removeBooksByAuthor($(this).prev().text());
-    $(this).prev().text().remove();
-    this.setObject(this.libraryKey);
+  this.$deleteAuthorsBtn = $(".author-delete");
+   $(".author-delete").on("click", function(){
+    var deletedAuthors = $(this).closest('li', this.$deleteAuthorsBtn).text();
+    $(this).closest('li', this.$deleteAuthorsBtn).remove()
+    gLib.removeBooksByAuthor(deletedAuthors);
   });
-
 }
 
-Library.prototype._handleRemove = function(e) {
+
+Library.prototype._handleRemoveBooksByAuthor = function(author) {
+  var results = false;
+  for (var i = this.booksArray.length - 1; i >= 0; i--) {
+    if (this.booksArray[i].author === author) {
+      this.booksArray.splice(i, 1);
+      results = true;
+    }
+  }
+  this.setObject(this.libraryKey);
+  return results;
+};
+
+Library.prototype._handleRemoveByTitle = function(e) {
   var row = $(e.currentTarget).parent().parent();
   this.removeBookByTitle(row.children()[1].innerText);
   row.remove();
@@ -256,6 +269,7 @@ Library.prototype._handleRemove = function(e) {
   $(document).ready(function() {
     window.gLib = new Library("allyLib");
     window.gLib.init();
+    gLib.getObject("allyLib");
   });
 
   //Book Instances

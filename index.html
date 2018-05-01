@@ -10,7 +10,7 @@
 
     <!-- Button trigger modal addBook -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-      Books!
+      Add a Book
     </button>
 
     <!-- Modal -->
@@ -19,9 +19,9 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Add Books Here</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
-            </button>
+            </button> -->
           </div>
           <div class="modal-body">
             <form class="modalForm">
@@ -34,12 +34,13 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button id="addBookModal" type="button" class="btn btn-primary">Add!</button>
-            <button id="addNotherBook" type="button" name="button">Add Another Book?</button>
+            <button type="button" class="addBookModal btn btn-primary">Add!</button>
           </div>
         </div>
       </div>
     </div>
+
+
 
     <!-- Button trigger modal Authors -->
     <button id="getAuthorBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#getAuthors">
@@ -56,7 +57,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div id="listOfAuthors" class="modal-body">
+          <div class="listOfAuthors" class="modal-body">
 
           </div>
           <div class="modal-footer">
@@ -97,6 +98,8 @@
           </li>
         </ul>
       </div>
+      <input id="searchInput" type="text" name="search" value="" placeholder="Search">
+      <button id="searchBooksButton" type="button" name="button">Search Library</button>
     </nav>
     <h1>Library</h1>
 
@@ -111,7 +114,7 @@
           <th scope="col" data-sortable="true" searchable="true" data-field="id">Remove</th>
         </tr>
       </thead>
-      <tbody id="tableBody">
+      <tbody class="tableBody">
       </tbody>
     </table>
 
