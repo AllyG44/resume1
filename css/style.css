@@ -21,6 +21,19 @@ img {
   max-width: 30%;
 }
 
+.delete-button {
+  background: url(delete.svg);
+  height: 25px;
+  width: 25px;
+  background-repeat: no-repeat;
+}
+
+.delete-button:hover {
+  background-color: red;
+  background: url(delete-hover.svg);
+  cursor: pointer;
+}
+
 @media (max-width: 1500px) {
 
 };
