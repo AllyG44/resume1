@@ -17,22 +17,24 @@ Library.prototype.init = function () {
   // this._handleRemoveBooksByAuthor();
   // this.$sortShtuff = $("#sorter");
   this.$addBtn = $(".addBookModal");
-  this.$addNotherBtn = $(".addMultiple");
+  this.$addNotherBtn = $("#addMultipleBooksButton");
   this.$deleteBtn = $(".delete-button");
   this.$searchBtn = $("#searchBooksButton");
   this.$getAuthors = $("#getAuthorBtn");
   // this.$secondFormTemplate = $(".secondForm form").clone();
   this.$deleteAuthorsBtn = $("#author-delete");
+  this.$randomBookBtn = $("#randomBookBtn")
   this._bindEvents();
 };
 
 Library.prototype._bindEvents = function() {
   this.$addBtn.on("click", $.proxy(this._handleAddOneBook, this));
-  // this.$addNotherBtn.on("click", $.proxy(this._handleAddNotherBook));
+  this.$addNotherBtn.on("click", $.proxy(this._handleAddNotherBook, this));
   this.$deleteBtn.on("click", $.proxy(this._handleRemoveByTitle, this));
   // this.$searchBtn.on("click", $.proxy(this._handleSearch, this));
   this.$getAuthors.on("click", $.proxy(this._handleGetAuthors, this));
   this.$deleteAuthorsBtn.on("click", $.proxy(this._handleRemoveBooksByAuthor));
+  this.$randomBookBtn.on("click", $.proxy(this._handleRandomBook, this));
   // $("#author-delete").on("click", $.proxy(this._handleRemoveBooksByAuthor, this))
 };
 
@@ -55,6 +57,7 @@ Library.prototype._clearBookInputs = function() {
   $("#authorInput").val("");
   $("#pagesInput").val("");
   $("#dateInput").val("");
+  $("#randomBookBody").val("");
   // $("#searchInput").val("");
   }
 
@@ -84,19 +87,19 @@ Library.prototype._handleAddOneBook = function(args) {
   return true;
 };
 
-// Library.prototype._handleAddNotherBook = function() {
-//   var tempBooks = [];
-//   var id = Date.now();
-//   for (var i = 0; i < 4; i++) {
-//     $(".modal-body-two").append(`
-//       <input id="coverImg" type="url" name="file" placeholder="Cover Image">
-//       <input id="titleInput" type="text" name="" placeholder="Title">
-//       <input id="authorInput" type="text" name="" placeholder="Author">
-//       <input id="pagesInput" type="number" name="" placeholder="Number of Pages">
-//       <input id="${id}" type="date" name="" placeholder="Publication Date">
-//     `)
-//   }
-// };
+Library.prototype._handleAddNotherBook = function() {
+  var tempBooks = [];
+  var counter = 0;
+  for (var i = 0; i < 4; i++) {
+    $(".modalFormOne").append(`
+      <input id="${counter++}" type="url" name="file" placeholder="Cover Image">
+      <input id="${counter++}" type="text" name="" placeholder="Title">
+      <input id="${counter++}" type="text" name="" placeholder="Author">
+      <input id="${counter++}" type="number" name="" placeholder="Number of Pages">
+      <input id="${counter++}" type="date" name="" placeholder="Publication Date">
+    `)
+  }
+};
 
 
 Library.prototype._handleGetAuthors = function() {
@@ -110,6 +113,10 @@ Library.prototype._handleGetAuthors = function() {
 //   var arrayResults = this.searchLib(searchResults);
 //   this._booksFromArray(arrayResults);
 // };
+
+Library.prototype._handleRandomBook = function(args) {
+  $("")
+}
 
 Library.prototype._displayAuthors = function(authors) {
   for (var i in authors) {
