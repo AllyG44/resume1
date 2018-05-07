@@ -40,6 +40,34 @@
       </div>
     </div>
 
+    <!-- Button trigger modal addBook -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#moreBooksModal">
+      Add Multiple Books
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="moreBooksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="multipleBooksTitle">Add Multiple Books</h5>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> -->
+          </div>
+          <div class="modal-body-two">
+            <form class="modalFormOne">
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="addMultiple btn btn-primary">Add!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
     <!-- Button trigger modal Authors -->
@@ -103,7 +131,7 @@
     </nav>
     <h1>Library</h1>
 
-    <table id="myTable" class="table table-dark table-hover table-striped" style="width: 50%" data-pagination="true" data-search="true" data-toggle="table">
+    <table id="mainTable" class="table table-dark table-hover table-striped" style="width: 50%" data-pagination="true" data-search="true" data-toggle="table">
       <thead>
         <tr>
           <th scope="col" data-sortable="true" searchable="true">Cover</th>
