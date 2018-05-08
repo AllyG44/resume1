@@ -2,9 +2,44 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title></title>
   </head>
   <body>
-    <button id="submitButton" type="button" name="button"></button>
+    <div>
+      <form class="locationForm" action="index.html" method="post">
+          <p>Country :</p>
+          <input id="countryInput" type="text" name="" value="">
+          <p>State :</p>
+          <input id="stateInput" type="text" name="" value="">
+          <span>City :</span>
+          <input id="cityInput" type="text" name="" value="">
+          <p>Zip Code :</p>
+          <input id="zipInput" type="number" name="" value="">
+          <p>Ranking :</p>
+          <input id="rankingInput" type="number" name="" value="">
+          <p>Member Count :</p>
+          <input id="memberInput" type="number" name="" value="">
+      </form>
+      <button id="submitButton" type="button" name="button">Submit</button>
+    </div>
+    <div>
+      <table>
+        <thead>
+          <td>Country</td>
+          <td>State</td>
+          <td>City</td>
+          <td>Zip</td>
+          <td>Ranking</td>
+          <td>Members</td>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" charset="utf-8"></script>
+    <script src="js/scripts.js" charset="utf-8"></script>
+
+    </script>
   </body>
 </html>
