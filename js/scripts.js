@@ -1,7 +1,7 @@
 var SearchMeetup = function() {};
 
 //Constructor
-var Location = function(args, instanceKey) {
+var Location = function(instanceKey, args) {
   this.country = args.country;
   this.state = args.state;
   this.page = args.page;
@@ -15,7 +15,6 @@ SearchMeetup.prototype.searchLoc = function(args) {
     search.state = $(".stateInput").val();
     search.page = $(".pageInput").val();
 
-    //
     this.getLocation(search.country, search.state, search.page);
 }
 
@@ -52,16 +51,18 @@ SearchMeetup.prototype.getLocation = function(country, state, page){
     }
   }).done(function(response) {
     console.log(response);
-    _this.printResults(response);
+    _this.printResults(response.results);
   }).fail(function(error) {
     console.log(error);
   })
 }
 
 //Function to display results to my table
-SearchMeetup.prototype.printResults = function(response) {
-  localStorage.setItem("meetupResults", JSON.stringify(response.results));
-  var results = response.results;
+SearchMeetup.prototype.printResults = function(results) {
+  var uluru;
+  var markers = [];
+  localStorage.setItem("meetupResults", JSON.stringify(results));
+  // var results = response.results;
   $("#tableBody").empty();
   for (var i = 0; i < results.length; i++) {
     $("#tableBody").append(`
@@ -72,9 +73,22 @@ SearchMeetup.prototype.printResults = function(response) {
       <td>${results[i].ranking}</td>
       <td>${results[i].member_count}</td></tr>
       `);
+      uluru = {lat: results[i].lat, lng: results[i].lon}
+      markers[i] = new google.maps.Marker({
+       position: uluru,
+       map: map
+     });
   }
   this.clearInputs();
 }
+
+var map;
+ function initMap() {
+   map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 39.8293017, lng: -98.5810676},
+    zoom: 4
+   });
+ }
 
 //Doc. ready
 $(function() {

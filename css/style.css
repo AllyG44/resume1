@@ -2,7 +2,20 @@ td {
   font-style: italic;
   border: 2px dotted black;
   text-align: center;
-  width: 155px;
+  width: 124px;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+ height: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+#map {
+  height: 88%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 #submitButton {
