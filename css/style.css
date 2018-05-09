@@ -1,3 +1,10 @@
+td {
+  font-style: italic;
+  border: 2px dotted black;
+  text-align: center;
+  width: 155px;
+}
+
 #submitButton {
   background-color: aqua;
 }
