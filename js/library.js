@@ -11,6 +11,7 @@
   };
 })();
 
+//Initilization method
 Library.prototype.init = function () {
   this.getLib();
   // this.getObject(this.libraryKey);
@@ -28,6 +29,7 @@ Library.prototype.init = function () {
   this._bindEvents();
 };
 
+//Bind events
 Library.prototype._bindEvents = function() {
   this.$addBtn.on("click", $.proxy(this._handleAddOneBook, this));
   this.$addNotherBtn.on("click", $.proxy(this._handleAddNotherBook, this));
@@ -39,6 +41,7 @@ Library.prototype._bindEvents = function() {
   $("#author-delete").on("click", $.proxy(this._handleRemoveBooksByAuthor, this));
 };
 
+//Display books on UI
 Library.prototype._booksFromArray = function(arg) {
   var deleteBtn = `<button class="delete-button"></button>`
 
@@ -60,6 +63,7 @@ Library.prototype._booksFromArray = function(arg) {
   }
 };
 
+//Clears inputs after adding a book
 Library.prototype._clearBookInputs = function() {
   $("#coverImg").val("");
   $("#titleInput").val("");
@@ -70,6 +74,7 @@ Library.prototype._clearBookInputs = function() {
   $("#searchInput").val("");
   }
 
+//UI button for adding a single book
 Library.prototype._handleAddOneBook = function(args) {
   var singleBook = new Book(args);
   // var deleteBtn = `<button class="delete-button"></button>`
@@ -95,6 +100,7 @@ Library.prototype._handleAddOneBook = function(args) {
   return true;
 };
 
+//UI button for adding multiple books
 Library.prototype._handleAddNotherBook = function() {
   var tempBooks = [];
   var counter = 0;
@@ -109,21 +115,24 @@ Library.prototype._handleAddNotherBook = function() {
   }
 };
 
-
+//UI button for displaying all authors
 Library.prototype._handleGetAuthors = function() {
   $("div.listOfAuthors").children().remove();
   this._displayAuthors(this.getAuthors());
 };
 
+//UI search (doesn't work yet)
 Library.prototype._handleSearch = function(args) {
   event.preventDefault();
   this.searchLib(args);
 };
 
+//UI displays a random book (doesn't work yet)
 Library.prototype._handleRandomBook = function(args) {
   $("")
 }
 
+//Area to append/display all authors
 Library.prototype._displayAuthors = function(authors) {
   for (var i in authors) {
     $("div.listOfAuthors").append(`
@@ -134,6 +143,7 @@ Library.prototype._displayAuthors = function(authors) {
       </div>
     `);
   }
+  //UI button to delete all books by specified author
   this.$deleteAuthorsBtn = $(".author-delete");
    $(".author-delete").on("click", function(){
     var deletedAuthors = $(this).closest('li', this.$deleteAuthorsBtn).text();
@@ -156,6 +166,7 @@ Library.prototype._displayAuthors = function(authors) {
 //   return results;
 // };
 
+//X button that deletes books from my table
 Library.prototype._handleRemoveByTitle = function(e) {
   var row = $(e.currentTarget).parent().parent();
   this.removeBookByTitle(row.children()[1].innerText);
@@ -163,7 +174,7 @@ Library.prototype._handleRemoveByTitle = function(e) {
   this.setObject(this.libraryKey);
 };
 
-//Book obj
+//Book obj/constructor
 var Book = function(args){
   this._id = args._id;
   this.cover = args.cover;
@@ -173,6 +184,9 @@ var Book = function(args){
   this.pubDate = new Date(args.pubDate);
 };
 
+//Here begins the console commands
+
+//Add single book
 Library.prototype.addBook = function(book) {
 for (var i = 0; i < book.length; i++) {
   if (Array.isArray(book)) {
@@ -189,6 +203,7 @@ for (var i = 0; i < book.length; i++) {
   return true;
 };
 
+//Removes book by title
 Library.prototype.removeBookByTitle = function(title) {
   for (var i = 0; i < this.booksArray.length; i++) {
     if (this.booksArray[i].title === title) {
@@ -199,6 +214,7 @@ Library.prototype.removeBookByTitle = function(title) {
   return false;
 };
 
+//Removes all books by specified author
 Library.prototype.removeBooksByAuthor = function(author) {
   var results = false;
   for (var i = this.booksArray.length - 1; i >= 0; i--) {
@@ -211,10 +227,12 @@ Library.prototype.removeBooksByAuthor = function(author) {
   return results;
 };
 
+//Retrieves random book from my array
 Library.prototype.getRandomBook = function() {
   return this.booksArray.length ? this.booksArray[Math.floor(Math.random() * this.booksArray.length)] : null;
 };
 
+//Retrieves book by title
 Library.prototype.getBookByTitle = function(title) {
   var tempArray = [];
   var pattern = new RegExp(title, "i");
@@ -226,6 +244,7 @@ Library.prototype.getBookByTitle = function(title) {
   return tempArray;
 };
 
+//Retrieves all books by specified author
 Library.prototype.getBooksByAuthor = function(author) {
   var tempArray = [];
   var pattern = new RegExp(author, "i");
@@ -237,6 +256,7 @@ Library.prototype.getBooksByAuthor = function(author) {
   return tempArray;
 };
 
+//Add multiple books
 Library.prototype.addBooks = function(books) {
   for (var i = 0; i < books.length; i++) {
     if (!Array.isArray(books)) {
@@ -252,6 +272,7 @@ Library.prototype.addBooks = function(books) {
   return count;
 };
 
+//Retrieves all authors available in array
 Library.prototype.getAuthors = function() {
   var authorGet = [];
   for (var i = 0; i < this.booksArray.length; i++) {
@@ -262,6 +283,7 @@ Library.prototype.getAuthors = function() {
   return authorGet;
 };
 
+//Retrieves random author name
 Library.prototype.getRandomAuthorName = function() {
   if (this.booksArray.length) {
     return this.booksArray[Math.floor(Math.random() * this.booksArray.length)].author;
@@ -270,6 +292,7 @@ Library.prototype.getRandomAuthorName = function() {
   }
 };
 
+//Search function, can search by title or by author
 Library.prototype.searchLib = function(string) {
   var searchArr = [];
   searchArr.push(this.getBookByTitle(string));
@@ -327,6 +350,7 @@ Library.prototype.postLib = function(book) {
 //  }
 // };
 
+//Doc ready
 $(document).ready(function() {
   window.gLib = new Library("allyLib");
   window.gLib.init();
