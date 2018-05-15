@@ -277,6 +277,7 @@ Library.prototype.searchLib = function(string) {
   return searchArr;
 };
 
+//Ajax GET request
 Library.prototype.getLib = function() {
   _this = this;
   $.ajax({
@@ -293,6 +294,7 @@ Library.prototype.getLib = function() {
 })
 };
 
+//Ajax POST request
 Library.prototype.postLib = function(book) {
   _this = this;
   $.ajax({
