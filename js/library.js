@@ -14,18 +14,13 @@
 //Initilization method
 Library.prototype.init = function () {
   this.getLib();
-  // this.getObject(this.libraryKey);
-  // this._booksFromArray();
-  // this._handleRemoveBooksByAuthor();
-  // this.$sortShtuff = $("#sorter");
   this.$addBtn = $(".addBookModal");
   this.$addNotherBtn = $("#addMultipleBooksButton");
   this.$deleteBtn = $(".delete-button");
   this.$searchBtn = $("#searchBooksButton");
   this.$getAuthors = $("#getAuthorBtn");
-  // this.$secondFormTemplate = $(".secondForm form").clone();
   this.$deleteAuthorsBtn = $("#author-delete");
-  this.$randomBookBtn = $("#randomBookBtn")
+  this.$randomBookBtn = $("#randomBookBtn");
   this._bindEvents();
 };
 
@@ -38,6 +33,7 @@ Library.prototype._bindEvents = function() {
   this.$getAuthors.on("click", $.proxy(this._handleGetAuthors, this));
   this.$deleteAuthorsBtn.on("click", $.proxy(this._handleRemoveBooksByAuthor));
   this.$randomBookBtn.on("click", $.proxy(this._handleRandomBook, this));
+  // can't store before modal appears...?
   $("#author-delete").on("click", $.proxy(this._handleRemoveBooksByAuthor, this));
 };
 
@@ -55,15 +51,15 @@ Library.prototype._booksFromArray = function(arg) {
     pubDate = this.booksArray[i].pubDate;
     $('.tableBody').append(`
     <tr><td><img src="${cover}"></td>
-    <td>${title}</td>
-    <td>${author}</td>
-    <td>${numPages}</td>
-    <td>${pubDate}</td>
+    <td contenteditable>${title}</td>
+    <td contenteditable>${author}</td>
+    <td contenteditable>${numPages}</td>
+    <td contenteditable>${pubDate}</td>
     <td>${deleteBtn}</td></tr>`);
   }
 };
 
-//Clears inputs after adding a book
+//Clears inputs in modal after adding a book
 Library.prototype._clearBookInputs = function() {
   $("#coverImg").val("");
   $("#titleInput").val("");
@@ -77,14 +73,13 @@ Library.prototype._clearBookInputs = function() {
 //UI button for adding a single book
 Library.prototype._handleAddOneBook = function(args) {
   var singleBook = new Book(args);
-  // var deleteBtn = `<button class="delete-button"></button>`
+  var deleteBtn = `<button class="delete-button"></button>`
 
   singleBook.cover = $("#coverImg").val();
   singleBook.title = $("#titleInput").val();
   singleBook.author = $("#authorInput").val();
   singleBook.numPages = $("#pagesInput").val();
   singleBook.pubDate = $("#dateInput").val();
-  // singleBook.deleteBtn = $(".delete-button");
 
   if (!singleBook.title || !singleBook.author) {
     alert("fields required!");
@@ -92,15 +87,22 @@ Library.prototype._handleAddOneBook = function(args) {
   }
 
   if (this.addBook(singleBook)) {
+    console.log(singleBook);
     this.postLib(singleBook);
-    // $('#tableBody').append("<tr><td><img src="+singleBook.cover+"></td><td>"+singleBook.title+"</td><td>"+singleBook.author+"</td><td>"+singleBook.numPages+"</td><td>"+singleBook.pubDate+"</td><td><img src="+deleteImg+" id="+deleteBtn+"></td></tr>");
+    $('.tableBody').append(`
+    <tr><td><img src="${singleBook.cover}"></td>
+    <td>${singleBook.title}</td>
+    <td>${singleBook.author}</td>
+    <td>${singleBook.numPages}</td>
+    <td>${singleBook.pubDate}</td>
+    <td>${deleteBtn}</td></tr>`);
   }
 
   this._clearBookInputs();
   return true;
 };
 
-//UI button for adding multiple books
+//UI button for adding multiple books -- Couldn't get it to work with Ajax..
 Library.prototype._handleAddNotherBook = function() {
   var tempBooks = [];
   var counter = 0;
@@ -121,19 +123,9 @@ Library.prototype._handleGetAuthors = function() {
   this._displayAuthors(this.getAuthors());
 };
 
-//UI search (doesn't work yet)
-Library.prototype._handleSearch = function(args) {
-  event.preventDefault();
-  this.searchLib(args);
-};
-
-//UI displays a random book (doesn't work yet)
-Library.prototype._handleRandomBook = function(args) {
-  $("")
-}
-
 //Area to append/display all authors
 Library.prototype._displayAuthors = function(authors) {
+  var _this = this;
   for (var i in authors) {
     $("div.listOfAuthors").append(`
       <div class="card remove-author-card">
@@ -143,35 +135,25 @@ Library.prototype._displayAuthors = function(authors) {
       </div>
     `);
   }
-  //UI button to delete all books by specified author
+}
+
+Library.prototype._removeAuthorCatchAll = function (author) {
   this.$deleteAuthorsBtn = $(".author-delete");
    $(".author-delete").on("click", function(){
     var deletedAuthors = $(this).closest('li', this.$deleteAuthorsBtn).text();
     $("td:contains("+deletedAuthors+")").parent().remove()
     $(this).closest('li', this.$deleteAuthorsBtn).remove();
     gLib.removeBooksByAuthor(deletedAuthors);
+    // _this.deleteLib(author);
   });
-}
-
-
-// Library.prototype._handleRemoveBooksByAuthor = function(author) {
-//   var results = false;
-//   for (var i = this.booksArray.length - 1; i >= 0; i--) {
-//     if (this.booksArray[i].author === author) {
-//       this.booksArray.splice(i, 1);
-//       results = true;
-//     }
-//   }
-//   this.setObject(this.libraryKey);
-//   return results;
-// };
+};
 
 //X button that deletes books from my table
 Library.prototype._handleRemoveByTitle = function(e) {
   var row = $(e.currentTarget).parent().parent();
   this.removeBookByTitle(row.children()[1].innerText);
   row.remove();
-  this.setObject(this.libraryKey);
+  this.deleteLib();
 };
 
 //Book obj/constructor
@@ -186,7 +168,8 @@ var Book = function(args){
 
 //Here begins the console commands
 
-//Add single book
+//Add single book, was working with local storage
+//Now doesn't really work in console, only being called by _handleAddOneBook function
 Library.prototype.addBook = function(book) {
 for (var i = 0; i < book.length; i++) {
   if (Array.isArray(book)) {
@@ -199,7 +182,7 @@ for (var i = 0; i < book.length; i++) {
     }
   }
   // this.postLib(book);
-  // this.booksArray.push(book);
+  this.booksArray.push(book);
   return true;
 };
 
@@ -223,7 +206,8 @@ Library.prototype.removeBooksByAuthor = function(author) {
       results = true;
     }
   }
-   this.setObject(this.libraryKey);
+  this._removeAuthorCatchAll(author)
+  this.deleteLib(author);
   return results;
 };
 
@@ -311,9 +295,9 @@ Library.prototype.getLib = function() {
   for (var i = 0; i < response.length; i++) {
     _this.booksArray.push(new Book(response[i]));
   }
-  console.log(response);
+  console.log("response");
 }).fail(function(error) {
-  console.log(error);
+  console.log("error");
 })
 };
 
@@ -326,47 +310,45 @@ Library.prototype.postLib = function(book) {
   url: "http://localhost:3000/library/",
   data: book
 }).done(function(response) {
-  $('.tableBody').append("<tr><td>"+response.cover+"</td><td>"
-  +response.title+"</td><td>"+response.author+"</td><td>"
-  +response.numPages+"</td><td>"+response.pubDate+"</td></tr>");
-  // _this.booksArray.push(new Book(book));
-  console.log(response);
+  console.log("postLib success!");
 }).fail(function(error) {
-  console.log(error);
+  console.log("error");
 })
 };
 
-// Library.prototype.setObject = function(libraryKey) {
-//   localStorage.setItem(libraryKey, JSON.stringify(this.booksArray));
-//   return libraryKey;
-// };
-//
-// Library.prototype.getObject = function(instanceKey) {
-//   // return this.booksArray = JSON.parse(localStorage.getItem(instanceKey));
-//   this.booksArray = JSON.parse(localStorage.getItem(instanceKey));
-//
-//  if (this.booksArray === null) {
-//      this.booksArray = new Array();
-//  }
-// };
+//Ajax delete function, removes books from DB
+//Currently not working at all, but was giving me a 404 error when it at least gave me an error
+Library.prototype.deleteLib = function(book) {
+  _this = this;
+  $.ajax({
+  dataType: "json",
+  type: "DELETE",
+  url: "http://localhost:3000/library/",
+  data: book
+}).done(function(response) {
+  console.log("Yay!");
+}).fail(function(error) {
+  console.log("FAIL...");
+})
+};
+
+//PUT not working
+Library.prototype.putLib = function(book) {
+  _this = this;
+  $.ajax({
+  dataType: "json",
+  type: "PUT",
+  url: "http://localhost:3000/library/",
+  data: book
+}).done(function(response) {
+  console.log("Success!");
+}).fail(function(error) {
+  console.log("FAIL...");
+})
+};
 
 //Doc ready
 $(document).ready(function() {
   window.gLib = new Library("allyLib");
   window.gLib.init();
-  // gLib.getObject("allyLib");
 });
-
-  //Book Instances
-  // window.gBook1 = new Book({cover: "css/IT.jpg", title: "IT", author: "Stephen King", numPages: 800, pubDate: "December 17, 1986"});
-  // window.gBook2 = new Book({cover: "css/Shining.jpg", title: "The Shining", author: "Stephen King", numPages: 424, pubDate: "April 9, 1977"});
-  // window.gBook3 = new Book({cover: "css/nineteenEightyFour.jpg", title: "1984", author: "George Orwell", numPages: 674, pubDate: "June 8, 1949"});
-  // window.gBook4 = new Book({cover: "css/animalFarm.jpg", title: "Animal Farm", author: "George Orwell", numPages: 444, pubDate: "August 17, 1945"});
-  // window.gBook5 = new Book({cover: "css/wonderland.jpg", title: "Alice's Adventures in Wonderland", author: "Lewis Carroll", numPages: 400, pubDate: "November 26, 1865"});
-  // window.gBook6 = new Book({cover: "css/looking-glass.jpg", title: "Through the Looking-Glass", author: "Lewis Carroll", numPages: 424, pubDate: "January 27, 1871"});
-  // window.gBook7 = new Book({cover: "css/jabberwocky.jpg", title: "Jabberwocky", author: "Lewis Carroll", numPages: 390, pubDate: "March 10, 1871"});
-  // window.gBook8 = new Book({cover: "css/catcherRye.jpg", title: "Catcher In The Rye", author: "JD Salinger", numPages: 200, pubDate: "December 25, 1987"});
-  // window.gBook9 = new Book({cover: "css/frannyAndZooey.jpg", title: "Franny and Zooey", author: "JD Salinger", numPages: 320, pubDate: "June 22, 1953"});
-  // window.gBook10 = new Book({cover: "css/teddy.jpg", title: "Teddy", author: "JD Salinger", numPages: 250, pubDate: "September 21, 1953"});
-  //
-  // window.bookLib = [gBook1, gBook2, gBook3, gBook4, gBook5, gBook6, gBook7, gBook8, gBook9, gBook10];
