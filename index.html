@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <!-- Button trigger modal addBook -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Add a Book
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Books Here</h5>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> -->
+          </div>
+          <div class="modal-body">
+            <form class="modalForm">
+              <input id="coverImg" type="url" name="file" placeholder="Cover Image">
+              <input id="titleInput" type="text" name="" placeholder="Title">
+              <input id="authorInput" type="text" name="" placeholder="Author">
+              <input id="pagesInput" type="number" name="" placeholder="Number of Pages">
+              <input id="dateInput" type="date" name="" placeholder="Publication Date">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="addBookModal btn btn-primary">Add!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger modal addBook -->
+    <button id="addMultipleBooksButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#moreBooksModal">
+      Add Multiple Books
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="moreBooksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="multipleBooksTitle">Add Multiple Books</h5>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> -->
+          </div>
+          <div class="modal-body-two">
+            <form class="modalFormOne">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="addMultiple btn btn-primary">Add!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Button trigger modal Authors -->
+    <button id="getAuthorBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#getAuthors">
+      Get Authors
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="getAuthors" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">All Authors</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="listOfAuthors" class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger random book -->
+    <button id="randomBookBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#randomBook">
+      Random Book
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="randomBook" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Random Book</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="randomBookBody">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+      <h2>Library</h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Actions
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Add single book</a>
+              <a class="dropdown-item" href="#">Add multiple books</a>
+              <a class="dropdown-item" href="#">Remove by Title</a>
+              <a class="dropdown-item" href="#">Remove by Author</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Get book by Title</a>
+              <a class="dropdown-item" href="#">Get books by Author</a>
+              <a class="dropdown-item" href="#">View all Authors</a>
+              <a class="dropdown-item" href="#">Get random book</a>
+              <a class="dropdown-item" href="#">Get random Author</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Save storage</a>
+              <a class="dropdown-item" href="#">Load storage</a>
+              <a class="dropdown-item" href="#">Clear storage</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <input id="searchInput" type="text" name="search" value="" placeholder="Search">
+      <button id="searchBooksButton" type="button" name="button">Search Library</button>
+    </nav>
+    <h1>Library</h1>
+
+    <table id="mainTable" class="table table-dark table-hover table-striped" style="width: 50%" data-pagination="true" data-search="true" data-toggle="table">
+      <thead>
+        <tr>
+          <th scope="col" data-sortable="true" searchable="true">Cover</th>
+          <th scope="col" data-sortable="true" searchable="true" data-field="id">Title</th>
+          <th scope="col" data-sortable="true" searchable="true" data-field="id">Author</th>
+          <th scope="col" data-sortable="true" searchable="true" data-field="id">Number of Pages</th>
+          <th scope="col" data-sortable="true" searchable="true" data-field="id">Publication Date</th>
+          <th scope="col" data-sortable="true" searchable="true" data-field="id">Remove</th>
+        </tr>
+      </thead>
+      <tbody class="tableBody">
+      </tbody>
+    </table>
+
+      <!-- <button onclick="_buildTable();">Click to build the table!</button>
+      <table id="myTable" class="display" style="width:90%">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th># of Pages</th>
+            <th>Publication date</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table> -->
+
+    <script src="js/jquery.js" charset="utf-8"></script>
+    <script src="js/bootstrap.bundle.js" charset="utf-8"></script>
+    <script src="js/library.js" charset="utf-8"></script>
+
+  </body>
+</html>
